@@ -5,9 +5,4 @@ pipelines:
       type: Bash
       execution:
        onExecute:
-        - echo "Hello World!"
-    - name: demo_second_step
-       type: Bash
-       execution:
-        onExecute:
-         - echo "Hello world 2"    
+        - echo "Hello World!"  

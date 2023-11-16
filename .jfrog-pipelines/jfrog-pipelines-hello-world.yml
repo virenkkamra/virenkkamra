@@ -4,14 +4,14 @@ pipelines:
       - name: demo_step
         type: Bash
         execution:
+          onFailure: 
+            - 345yyhfdvewrfvdtehgdbfd        
           onExecute:
             - echo "on execute"
           onSuccess:
             - 54nbfyuyiu
           onComplete:
             - 5678gcvbh
-          onFailure: 
-            - 345yyhfdvewrfvdtehgdbfd
 # pipelines:
 #  - name: viren_demo
 #    steps:

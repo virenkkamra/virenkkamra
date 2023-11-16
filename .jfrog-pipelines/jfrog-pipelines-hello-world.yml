@@ -1,60 +1,68 @@
 pipelines:
- - name: viren_demo
-   steps:
-    - name: demo_step_trigger
-      type: Bash
-      execution:
-       onExecute:
-        - echo "trigger" #green
-    - name: demo_step_one
-      type: Bash
-      configuration:
-       inputSteps:
-        - demo_step_trigger      
-      execution:
-       onExecute:
-        - fgrtytjrergdgn #red
-       onFailure: 
-        - echo "OnFail log" #green
-       onComplete: 
-        - echo "onComplete log" #green
-    - name: demo_step_two
-      type: Bash
-      configuration:
-       inputSteps:
-        - demo_step_trigger      
-      execution:
-       onExecute:
-        - echo "hello world"
-       onSuccess:
-        - dofnbonod5543 #red     
-    - name: demo_step_three 
-      type: Bash
-      configuration:
-       inputSteps:
-        - demo_step_trigger      
-      execution:
-       onExecute:
-        - echo "hello world"
-       onComplete:
-        - dofnbonod5543  #red 
-    - name: demo_step_four
-      type: Bash
-      configuration:
-       inputSteps:
-        - demo_step_trigger      
-      execution:
-       onExecute:
-        - fgrtytjrergdgn
-       onFailure: 
-        - rbtebtedbe #red
-    - name: demo_step_five
-      type: Bash
-      configuration:
-       inputSteps:
-        - demo_step_trigger      
-      execution:
-       onExecute:
-        - echo "hello world"
-       onSuccess:
-        - echo "onsuccess" #green            
+  - name: viren_demo
+    steps:
+      - name: demo_step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "Hello world"
+# pipelines:
+#  - name: viren_demo
+#    steps:
+#     - name: demo_step_trigger
+#       type: Bash
+#       execution:
+#        onExecute:
+#         - echo "trigger" #green
+#     - name: demo_step_one
+#       type: Bash
+#       configuration:
+#        inputSteps:
+#         - demo_step_trigger      
+#       execution:
+#        onExecute:
+#         - fgrtytjrergdgn #red
+#        onFailure: 
+#         - echo "OnFail log" #green
+#        onComplete: 
+#         - echo "onComplete log" #green
+#     - name: demo_step_two
+#       type: Bash
+#       configuration:
+#        inputSteps:
+#         - demo_step_trigger      
+#       execution:
+#        onExecute:
+#         - echo "hello world"
+#        onSuccess:
+#         - dofnbonod5543 #red     
+#     - name: demo_step_three 
+#       type: Bash
+#       configuration:
+#        inputSteps:
+#         - demo_step_trigger      
+#       execution:
+#        onExecute:
+#         - echo "hello world"
+#        onComplete:
+#         - dofnbonod5543  #red 
+#     - name: demo_step_four
+#       type: Bash
+#       configuration:
+#        inputSteps:
+#         - demo_step_trigger      
+#       execution:
+#        onExecute:
+#         - fgrtytjrergdgn
+#        onFailure: 
+#         - rbtebtedbe #red
+#     - name: demo_step_five
+#       type: Bash
+#       configuration:
+#        inputSteps:
+#         - demo_step_trigger      
+#       execution:
+#        onExecute:
+#         - echo "hello world"
+#        onSuccess:
+#         - echo "onsuccess" #green            

@@ -6,6 +6,10 @@ pipelines:
         execution:
           onExecute:
             - fisubvosbpfhvprhs
+          onSuccess:
+            - echo "on success trigger"
+          onComplete:
+            - echo "on complete trigger"
 # pipelines:
 #  - name: viren_demo
 #    steps:

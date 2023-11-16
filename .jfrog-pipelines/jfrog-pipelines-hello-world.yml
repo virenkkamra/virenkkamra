@@ -5,7 +5,7 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - echo dofbosv
+            - fisubvosbpfhvprhs
 # pipelines:
 #  - name: viren_demo
 #    steps:

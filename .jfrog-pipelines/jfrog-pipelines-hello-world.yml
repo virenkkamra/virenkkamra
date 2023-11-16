@@ -9,7 +9,7 @@ pipelines:
           onSuccess:
             - 54nbfyuyiu
           onComplete:
-            - echo "on complete trigger"
+            - 5678gcvbh
 # pipelines:
 #  - name: viren_demo
 #    steps:

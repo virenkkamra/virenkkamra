@@ -6,3 +6,5 @@ pipelines:
       execution:
        onExecute:
         - echo "Hello World!"  
+    - name: demo_step_two
+       type: Bash

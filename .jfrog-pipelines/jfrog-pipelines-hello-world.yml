@@ -5,7 +5,7 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - fisubvosbpfhvprhs
+            - echo "on execute"
           onSuccess:
             - 54nbfyuyiu
           onComplete:

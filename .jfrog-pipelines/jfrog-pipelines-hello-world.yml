@@ -18,11 +18,3 @@ pipelines:
             - echo "Welcome to the Viren demo!"
             - echo "This is a simple pipeline to demonstrate the capabilities of
               the pipeline engine."
-      - name: another_step
-        type: Bash
-        execution:
-          onExecute:
-            - echo "This is another step in the pipeline."
-            - echo "It performs a different task than the previous step."
-            - echo "Together, these steps demonstrate the flexibility of the
-              pipeline engine."

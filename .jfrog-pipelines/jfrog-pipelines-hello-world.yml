@@ -7,7 +7,7 @@ pipelines:
           onExecute: 
             - 345yyhfdvewrfvdtehgdbfd        
           onFailure:
-            - fcguvijkp976567
+            - echo "hello failure"
           onSuccess:
             - 54nbfyuyiu
           onComplete:

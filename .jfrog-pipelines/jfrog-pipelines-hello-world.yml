@@ -7,7 +7,7 @@ pipelines:
           onExecute:
             - fisubvosbpfhvprhs
           onSuccess:
-            - echo "on success trigger"
+            - 54nbfyuyiu
           onComplete:
             - echo "on complete trigger"
 # pipelines:

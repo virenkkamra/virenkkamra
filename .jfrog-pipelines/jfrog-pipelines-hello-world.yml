@@ -1,20 +1,20 @@
-# pipelines:
-#  - name: viren_demo
-#    steps:
-#     - name: demo_step
-#       type: Bash
-#       execution:
-#        onExecute:
-#         - echo "Hello World!"
----
 pipelines:
-  - name: viren_demo
-    steps:
-      - name: demo_step
-        type: Bash
-        execution:
-          onExecute:
-            - echo "Hello World!"
-            - echo "Welcome to the Viren demo!"
-            - echo "This is a simple pipeline to demonstrate the capabilities of
-              the pipeline engine."
+ - name: viren_demo
+   steps:
+    - name: demo_step
+      type: Bash
+      execution:
+       onExecute:
+        - echo "Hello World!"
+# ---
+# pipelines:
+#   - name: viren_demo
+#     steps:
+#       - name: demo_step
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo "Hello World!"
+#             - echo "Welcome to the Viren demo!"
+#             - echo "This is a simple pipeline to demonstrate the capabilities of
+#               the pipeline engine."

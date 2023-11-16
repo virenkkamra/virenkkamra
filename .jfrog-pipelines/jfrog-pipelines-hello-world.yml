@@ -4,10 +4,10 @@ pipelines:
       - name: demo_step
         type: Bash
         execution:
-          onFailure: 
+          onExecute: 
             - 345yyhfdvewrfvdtehgdbfd        
-          onExecute:
-            - echo "on execute"
+          onFailure:
+            - fcguvijkp976567
           onSuccess:
             - 54nbfyuyiu
           onComplete:

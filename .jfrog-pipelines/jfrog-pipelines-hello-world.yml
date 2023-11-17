@@ -5,7 +5,7 @@ pipelines:
         type: Bash
         execution:
           onExecute: 
-            - 345yyhfdvewrfvdtehgdbfd        
+            - echo "hello onExecute"       
           onFailure:
             - echo "hello failure"
           onSuccess:

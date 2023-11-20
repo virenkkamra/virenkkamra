@@ -7,7 +7,7 @@ pipelines:
           onExecute: 
             - ftcvyu576879    
           onFailure:
-            - echo "hello failure"
+            - dfiubvobo
           onSuccess:
             - 54nbfyuyiu
           onComplete:

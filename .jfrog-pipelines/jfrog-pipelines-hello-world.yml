@@ -5,7 +5,7 @@ pipelines:
         type: Bash
         configuration: 
           environmentVariables:
-            MY_ENV: "Hi from ENV"
+            MY_ENV: "Hi from ENV ${{ environmentVariables.MY_ENV }}"
         execution:
           onExecute: 
             - echo "on Excute"

@@ -8,7 +8,7 @@ pipelines:
             MY_ENV: "Hi from ENV"
         execution:
           onExecute: 
-            - echo "on execute success"
+            - echo "The value is: MY_ENV_VAR"
           onFailure:
             - echo "on fail success"
           onSuccess:

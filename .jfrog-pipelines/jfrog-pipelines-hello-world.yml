@@ -3,6 +3,9 @@ pipelines:
     steps:
       - name: demo_step
         type: Bash
+        configuration: 
+          environmentVariables:
+            - echo "Hi from ENV variables"
         execution:
           onExecute: 
             - echo "on execute success"
@@ -11,7 +14,7 @@ pipelines:
           onSuccess:
             - echo "on success"
           onComplete:
-            - echo "on complete"
+            - echo "on complete"   
 # pipelines:
 #  - name: viren_demo
 #    steps:

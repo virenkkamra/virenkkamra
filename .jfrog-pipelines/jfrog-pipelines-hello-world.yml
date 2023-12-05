@@ -5,10 +5,10 @@ pipelines:
         type: Bash
         configuration: 
           environmentVariables:
-            MY_ENV: "Hi from ENV ${{ environmentVariables.MY_ENV }}"
+            MY_ENV: "Hi from ENV"
         execution:
           onExecute: 
-            - echo "on Excute"
+            - echo "on Excute ${{ environmentVariables.MY_ENV }}"
           onFailure:
             - echo "on fail success"
           onSuccess:

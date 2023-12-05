@@ -12,22 +12,6 @@ pipelines:
             - echo "on success"
           onComplete:
             - echo "on complete"
-          onExecute: 
-            - echo "on execute success"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on success"
-          onComplete:
-            - echo "on complete"
-          onExecute: 
-            - echo "on execute success"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on success"
-          onComplete:
-            - echo "on complete"  
 # pipelines:
 #  - name: viren_demo
 #    steps:

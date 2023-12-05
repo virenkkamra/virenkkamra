@@ -8,7 +8,7 @@ pipelines:
             MY_ENV: "Hi from ENV"
         execution:
           onExecute: 
-            - echo "on Excute ${{ configuration.environmentVariables.MY_ENV }}"
+            - echo "on Excute"
           onFailure:
             - echo "on fail success"
           onSuccess:

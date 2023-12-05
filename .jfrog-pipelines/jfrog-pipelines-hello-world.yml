@@ -5,7 +5,7 @@ pipelines:
         type: Bash
         configuration: 
           environmentVariables:
-            - echo "Hi from ENV variables"
+            MY_ENV: "Hi from ENV"
         execution:
           onExecute: 
             - echo "on execute success"

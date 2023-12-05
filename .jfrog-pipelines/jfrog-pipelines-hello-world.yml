@@ -5,13 +5,13 @@ pipelines:
         type: Bash
         execution:
           onExecute: 
-            - ftcvyu576879    
+            - echo "on execute success"
           onFailure:
-            - dfiubvobo
+            - echo "on fail success"
           onSuccess:
-            - 54nbfyuyiu
+            - echo "on success"
           onComplete:
-            - 5678gcvbh
+            - echo "on complete"
 # pipelines:
 #  - name: viren_demo
 #    steps:

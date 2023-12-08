@@ -1,5 +1,5 @@
 pipelines:
-  - name: viren_demo_for_source
+  - name: viren_demo
     steps:
       - name: demo_step
         type: Bash

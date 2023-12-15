@@ -14,23 +14,7 @@ pipelines:
           onSuccess:
             - echo "on success change"
           onComplete:
-            - echo "on complete"
-      - name: demo_step_1
-        type: Bash
-        configuration: 
-          environmentVariables:
-            MY_ENV: "HifromENV"
-          inputSteps:
-            - name: demo_step
-        execution:
-          onExecute: 
-            - echo "on Excute $MY_ENV "
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on success change"
-          onComplete:
-            - echo "on complete"               
+            - echo "on complete"             
 # pipelines:
 #  - name: viren_demo
 #    steps:

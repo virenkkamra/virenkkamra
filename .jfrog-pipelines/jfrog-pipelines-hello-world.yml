@@ -12,7 +12,7 @@ pipelines:
           onFailure:
             - echo "on fail success"
           onSuccess:
-            - echo "on success"
+            - echo "on success change"
           onComplete:
             - echo "on complete"   
 # pipelines:

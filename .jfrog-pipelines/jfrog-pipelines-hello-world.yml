@@ -21,7 +21,7 @@ pipelines:
           environmentVariables:
             MY_ENV: "HifromENV"
           inputSteps:
-            name: demo_step
+            - name: demo_step
         execution:
           onExecute: 
             - echo "on Excute $MY_ENV "

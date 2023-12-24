@@ -12,7 +12,7 @@ pipelines:
           onFailure:
             - echo "on fail success"
           onSuccess:
-            - send_notification mySlackIntegration
+            - echo "on Success"
           onComplete:
             - echo "on complete"             
 # pipelines:

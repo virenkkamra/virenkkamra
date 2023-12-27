@@ -46,7 +46,119 @@ pipelines:
           onSuccess:
             - echo "on Success"
           onComplete:
-            - echo "on complete"            
+            - echo "on complete"
+  - name: viren_demo_seven
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete" 
+  - name: viren_demo_six
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete" 
+  - name: viren_demo_five
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete" 
+  - name: viren_demo_four
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete" 
+  - name: viren_demo_random_three
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+  - name: viren_demo_random_two
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+  - name: viren_demo_random_one
+    steps:
+      - name: demo_step
+        type: Bash
+        configuration: 
+          environmentVariables:
+            MY_ENV: "HifromENV"
+        execution:
+          onExecute: 
+            - echo "on Excute $MY_ENV "
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"             
 # pipelines:
 #  - name: viren_demo
 #    steps:

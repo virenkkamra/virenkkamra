@@ -1,5 +1,5 @@
 pipelines:
-  - name: viren_demo_PDE_manual_pipe_source_id
+  - name: viren_demo_PDE_manual
     steps:
       - name: demo_step
         type: Bash

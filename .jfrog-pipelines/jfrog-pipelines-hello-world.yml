@@ -1,7 +1,7 @@
 pipelines:
   - name: viren_demo_PDE_manual
     steps:
-      - name: demoZstep
+      - name: demoZstepA
         type: Bash
         configuration: 
           environmentVariables:

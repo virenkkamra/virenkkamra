@@ -1,4 +1,4 @@
-pipelines:
+pipelines:A
   - name: automation_demo_PDE
     steps:
       - name: demoZstepAAAAAAAAAA

@@ -3,7 +3,10 @@ pipelines:
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAA
         type: Bash
-        configuration: 
+        configuration:
+          inputResources:
+          - name: automation_demo_PDE
+            trigger: false 
           environmentVariables:
             MY_ENV: "HifromENV"
         execution:

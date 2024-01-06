@@ -1,7 +1,7 @@
 pipelines:
   - name: automation_demo_PDE
     steps:
-      - name: demoZstepAAAAAAAAAAAA
+      - name: demoZstepAAAAAAAAAAAAA
         type: Bash
         configuration: 
           environmentVariables:

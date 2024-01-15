@@ -15,7 +15,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAA
+      - name: demoZstepRemoveThis
         type: Bash
         configuration:
           environmentVariables:
@@ -29,7 +29,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAA
+      - name: demoZstepAndThis
         type: Bash
         configuration:
           environmentVariables:

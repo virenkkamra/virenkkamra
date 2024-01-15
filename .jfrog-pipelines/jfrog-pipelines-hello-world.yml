@@ -70,6 +70,90 @@ pipelines:
           onSuccess:
             - echo "on Success"
           onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemoveAndThis_three
+        type: Bash
+        configuration:
+          inputSteps:
+           - name: demoZstepToRemoveAndThis
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemoveAndThis_four
+        type: Bash
+        configuration:
+          inputSteps:
+           - name: demoZstepToRemoveAndThis
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemoveAndThis_five
+        type: Bash
+        configuration:
+          inputSteps:
+           - name: demoZstepToRemoveAndThis
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemoveAndThis_six
+        type: Bash
+        configuration:
+          inputSteps:
+           - name: demoZstepToRemoveAndThis
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemoveAndThis_seven
+        type: Bash
+        configuration:
+          inputSteps:
+           - name: demoZstepToRemoveAndThis
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemoveAndThis_eight
+        type: Bash
+        configuration:
+          inputSteps:
+           - name: demoZstepToRemoveAndThis
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
             - echo "on complete"            
 # pipelines:
 #  - name: viren_demo

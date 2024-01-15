@@ -17,32 +17,15 @@ pipelines:
             - echo "on complete"
       - name: demoZstepRemove
         type: Bash
-        configuration:
-          environmentVariables:
-            MY_ENV: "HifromENV"
         execution:
           onExecute: 
-            - echo "on Excute $MY_ENV "
+            - echo "on Excute"
           onFailure:
             - echo "on fail success"
           onSuccess:
             - echo "on Success"
           onComplete:
-            - echo "on complete"
-      - name: demoZstepRemoveThis
-        type: Bash
-        configuration:
-          environmentVariables:
-            MY_ENV: "HifromENV"
-        execution:
-          onExecute: 
-            - echo "on Excute $MY_ENV "
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"            
+            - echo "on complete"     
   - name: automation_demo_PDE_two
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAA

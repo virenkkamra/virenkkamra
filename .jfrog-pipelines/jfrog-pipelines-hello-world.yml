@@ -1,7 +1,7 @@
 pipelines:
   - name: automation_demo_PDE
     steps:
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAA
+      - name: demoZstep
         type: Bash
         configuration:
           environmentVariables:
@@ -19,7 +19,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-           - name: demoZstepAAAAAAAAAAAAAAAAAAAAAA
+           - name: demoZstep
         execution:
           onExecute: 
             - echo "on Excute"
@@ -57,7 +57,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_two
+      - name: demoZstepToRemoveAndThis2
         type: Bash
         configuration:
           inputSteps:
@@ -71,7 +71,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_three
+      - name: demoZstepToRemoveAndThis3
         type: Bash
         configuration:
           inputSteps:
@@ -85,7 +85,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_four
+      - name: demoZstepToRemoveAndThis4
         type: Bash
         configuration:
           inputSteps:
@@ -99,7 +99,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_five
+      - name: demoZstepToRemoveAndThis5
         type: Bash
         configuration:
           inputSteps:
@@ -113,7 +113,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_six
+      - name: demoZstepToRemoveAndThis6
         type: Bash
         configuration:
           inputSteps:
@@ -127,7 +127,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_seven
+      - name: demoZstepToRemoveAndThis7
         type: Bash
         configuration:
           inputSteps:
@@ -141,7 +141,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_eight
+      - name: demoZstepToRemoveAndThis8
         type: Bash
         configuration:
           inputSteps:
@@ -155,7 +155,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_nine
+      - name: demoZstepToRemoveAndThis9
         type: Bash
         configuration:
           inputSteps:
@@ -169,7 +169,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_ten
+      - name: demoZstepToRemoveAndThis10
         type: Bash
         configuration:
           inputSteps:
@@ -183,7 +183,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_eleven
+      - name: demoZstepToRemoveAndThis11
         type: Bash
         configuration:
           inputSteps:
@@ -197,7 +197,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_twelve
+      - name: demoZstepToRemoveAndThis12
         type: Bash
         configuration:
           inputSteps:
@@ -211,7 +211,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_thirteen
+      - name: demoZstepToRemoveAndThis13
         type: Bash
         configuration:
           inputSteps:
@@ -225,7 +225,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_fourteen
+      - name: demoZstepToRemoveAndThis14
         type: Bash
         configuration:
           inputSteps:
@@ -239,7 +239,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_fiftenn
+      - name: demoZstepToRemoveAndThis15
         type: Bash
         configuration:
           inputSteps:
@@ -253,7 +253,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_sixteen
+      - name: demoZstepToRemoveAndThis16
         type: Bash
         configuration:
           inputSteps:
@@ -267,7 +267,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_seventeen
+      - name: demoZstepToRemoveAndThis17
         type: Bash
         configuration:
           inputSteps:
@@ -281,7 +281,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_eightteen
+      - name: demoZstepToRemoveAndThis18
         type: Bash
         configuration:
           inputSteps:
@@ -295,7 +295,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_nineteen
+      - name: demoZstepToRemoveAndThis19
         type: Bash
         configuration:
           inputSteps:
@@ -309,7 +309,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_twenty
+      - name: demoZstepToRemoveAndThis20
         type: Bash
         configuration:
           inputSteps:
@@ -323,7 +323,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_twentyone
+      - name: demoZstepToRemoveAndThis21
         type: Bash
         configuration:
           inputSteps:
@@ -337,7 +337,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_twentytwo
+      - name: demoZstepToRemoveAndThis22
         type: Bash
         configuration:
           inputSteps:
@@ -351,7 +351,7 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis_twentyThree
+      - name: demoZstepToRemoveAndThis23
         type: Bash
         configuration:
           inputSteps:
@@ -364,7 +364,24 @@ pipelines:
           onSuccess:
             - echo "on Success"
           onComplete:
-            - echo "on complete"            
+            - echo "on complete"
+
+  # - name: automation_demo_PDE
+  #   steps:
+  #     - name: demoZstepAAAAAAAAAAAAAAAAAAAAAA
+  #       type: Bash
+  #       configuration:
+  #         environmentVariables:
+  #           MY_ENV: "HifromENV"
+  #       execution:
+  #         onExecute: 
+  #           - echo "on Excute $MY_ENV "
+  #         onFailure:
+  #           - echo "on fail success"
+  #         onSuccess:
+  #           - echo "on Success"
+  #         onComplete:
+  #           - echo "on complete"            
 # pipelines:
 #  - name: viren_demo
 #    steps:

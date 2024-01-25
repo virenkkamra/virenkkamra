@@ -2,6 +2,9 @@ pipelines:
   - name: automation_demo_PDE
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        resources:
+         - name: demo_resource
+           type: GitRepo
         type: Bash
         configuration:
           environmentVariables:

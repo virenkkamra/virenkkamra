@@ -4,8 +4,8 @@ pipelines:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
         configuration:
-          environmentVariables:
-            MY_ENV: "HifromENV"
+          inputResources:
+            - name: my_app_repo
         execution:
           onExecute: 
             - echo "on Excute $MY_ENV "

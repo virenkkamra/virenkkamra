@@ -1,11 +1,11 @@
 pipelines:
   - name: automation_demo_PDE
+    resources:
+     - name: git_repo_demo_resource
+       type: GitRepo
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
-        configuration:
-          inputResources:
-            - name: my_app_repo
         execution:
           onExecute: 
             - echo "on Excute $MY_ENV "

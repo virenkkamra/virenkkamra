@@ -2,13 +2,13 @@ pipelines:
   - name: automation_demo_PDE
     configuration:
      integrations:
-      - name: test_integration
+      - name: test_integration_for_testing
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
         execution:
           onExecute: 
-            - echo ${int_test_integration_name}
+            - echo ${int_test_integration_for_testing_name}
           onFailure:
             - echo "on fail success"
           onSuccess:

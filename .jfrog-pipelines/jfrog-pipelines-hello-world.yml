@@ -2,7 +2,7 @@ resources:
   - name: myGitRepoForTestingPurpose
     configuration:
      gitProvider: test_integration_for_testing
-     path: virenkkamra/virenkkamra/blob
+     path: {{.jfrog-pipelines.sourceRepository}}
      branches:
       include: main
 pipelines:

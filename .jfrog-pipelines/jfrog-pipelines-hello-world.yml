@@ -1,5 +1,6 @@
 resources:
   - name: myGitRepoForTestingPurpose
+    type: GitRepo
     configuration:
      gitProvider: test_integration_for_testing
      path: {{.jfrog-pipelines.sourceRepository}}

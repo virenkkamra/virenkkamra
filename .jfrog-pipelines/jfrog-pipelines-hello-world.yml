@@ -23,7 +23,7 @@ pipelines:
           onFailure:
             - echo "on fail success"
           onSuccess:
-            - echo "on Success"
+            - echo "on Success verify onCommit autoTrigger RUN:3"
           onComplete:
             - echo "on complete"
       - name: demoZstepToRemove

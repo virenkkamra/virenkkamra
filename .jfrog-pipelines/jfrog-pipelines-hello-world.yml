@@ -14,6 +14,9 @@ pipelines:
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
+        configuration:
+         inputResources:
+          - name: myGitRepoForTestingPurpose
         execution:
           onExecute: 
             - echo ${int_test_integration_for_testing_name}

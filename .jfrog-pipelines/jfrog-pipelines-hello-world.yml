@@ -1,5 +1,8 @@
 pipelines:
   - name: automation_demo_PDE
+    configuration:
+     integrations:
+      - name: test_integration
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash

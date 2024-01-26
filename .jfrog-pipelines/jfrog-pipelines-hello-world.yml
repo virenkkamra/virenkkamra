@@ -8,7 +8,7 @@ pipelines:
         type: Bash
         execution:
           onExecute: 
-            - echo "on Excute $MY_ENV "
+            - echo ${int_test_integration_name}
           onFailure:
             - echo "on fail success"
           onSuccess:

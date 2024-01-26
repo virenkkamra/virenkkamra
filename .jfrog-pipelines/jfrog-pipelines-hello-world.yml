@@ -1,3 +1,10 @@
+resources:
+  - name: myGitRepoForTestingPurpose
+    configuration:
+     gitProvider: test_integration_for_testing
+     path: virenkkamra/virenkkamra
+     branches:
+      include: main
 pipelines:
   - name: automation_demo_PDE
     configuration:

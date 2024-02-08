@@ -1,11 +1,11 @@
-# resources:
-#   - name: myGitRepoTEST
-#     type: GitRepo
-#     configuration:
-#      gitProvider: test_integration_for_testing
-#      path: {{.jfrog-pipelines.sourceRepository}}
-#      branches:
-#       include: main
+resources:
+  - name: myGitRepoTEST
+    type: GitRepo
+    configuration:
+     gitProvider: test_integration_for_testing
+     path: {{.jfrog-pipelines.sourceRepository}}
+     branches:
+      include: main
 pipelines:
   - name: automation_demo_PDE
     configuration:
@@ -14,9 +14,9 @@ pipelines:
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
-        # configuration:
-         # inputResources:
-         #  - name: myGitRepoTEST
+        configuration:
+         inputResources:
+          - name: myGitRepoTEST
         execution:
           onExecute: 
             - echo ${int_test_integration_for_testing_name}

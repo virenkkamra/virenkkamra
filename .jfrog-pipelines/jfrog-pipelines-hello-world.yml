@@ -1,5 +1,5 @@
 resources:
-  - name: myGitRepoSRC
+  - name: myGitRepoTEST
     type: GitRepo
     configuration:
      gitProvider: test_integration_for_testing
@@ -16,7 +16,7 @@ pipelines:
         type: Bash
         configuration:
          inputResources:
-          - name: myGitRepoSRC
+          - name: myGitRepoTEST
         execution:
           onExecute: 
             - echo ${int_test_integration_for_testing_name}

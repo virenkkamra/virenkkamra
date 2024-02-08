@@ -14,7 +14,7 @@ pipelines:
     steps:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
-        configuration:
+        # configuration:
          # inputResources:
          #  - name: myGitRepoTEST
         execution:

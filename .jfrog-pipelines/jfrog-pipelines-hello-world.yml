@@ -12,7 +12,14 @@ resources:
      gitProvider: test_integration_for_testing
      path: {{.jfrog-pipelines.sourceRepository}}
      branches:
-      include: main      
+      include: main
+  - name: myGitRepoTESTnewer
+    type: GitRepo
+    configuration:
+     gitProvider: test_integration_for_testing
+     path: {{.jfrog-pipelines.sourceRepository}}
+     branches:
+      include: main        
 pipelines:
   - name: automation_demo_PDE
     configuration:
@@ -52,6 +59,8 @@ pipelines:
       - name: demoZstepToRemoveAndThis
         type: Bash
         configuration:
+          inputResources:
+           - name: myGitRepoTESTnewer
           inputSteps:
            - name: demoZstepToRemove
         execution:

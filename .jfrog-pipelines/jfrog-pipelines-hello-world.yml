@@ -25,7 +25,6 @@ pipelines:
     configuration:
      integrations:
       - name: test_integration_for_testing
-  - name: TriggerPipelineTypeStep
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash

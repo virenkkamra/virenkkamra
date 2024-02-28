@@ -20,7 +20,12 @@ resources:
      path: {{.jfrog-pipelines.sourceRepository}}
      branches:
       include: main        
-pipelines:
+pipelines:  
+  - name: automation_demo_PDE
+    configuration:
+     integrations:
+      - name: test_integration_for_testing
+    steps:
   - name: TriggerPipelineTypeStep
     steps:
       - name: random1
@@ -40,12 +45,7 @@ pipelines:
           stepName: first_step
         execution: 
           onStart: 
-           - echo "TriggerPipelineTypeStep with pipeline 2"  
-  - name: automation_demo_PDE
-    configuration:
-     integrations:
-      - name: test_integration_for_testing
-    steps:
+           - echo "TriggerPipelineTypeStep with pipeline 2"      
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
         configuration:

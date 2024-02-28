@@ -417,6 +417,8 @@ pipelines:
         configuration:
           stepName: first_step
           waitForRunCompletion: false
+          integrations:
+            - name: test_integration_for_testing
         execution:
           onStart:
             - echo "executing first_step second"

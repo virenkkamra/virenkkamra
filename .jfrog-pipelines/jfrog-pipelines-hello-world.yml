@@ -21,6 +21,26 @@ resources:
      branches:
       include: main        
 pipelines:
+  - name: TriggerPipelineTypeStep
+    steps:
+      - name: random1
+        type: TriggerPipeline
+        configuration:
+          pipelineName: pipeline2
+          stepName: first_step
+        execution: 
+          onStart: 
+           - echo "TriggerPipelineTypeStep"
+  - name: pipeline2
+    steps:
+      - name: first_step
+        type: Bash
+        configuration:
+          pipelineName: pipeline2
+          stepName: first_step
+        execution: 
+          onStart: 
+           - echo "TriggerPipelineTypeStep with pipeline 2"  
   - name: automation_demo_PDE
     configuration:
      integrations:

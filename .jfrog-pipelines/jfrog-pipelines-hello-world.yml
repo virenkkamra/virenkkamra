@@ -27,25 +27,7 @@ pipelines:
       - name: test_integration_for_testing
     steps:
   - name: TriggerPipelineTypeStep
-    steps:
-      - name: random1
-        type: TriggerPipeline
-        configuration:
-          pipelineName: pipeline2
-          stepName: first_step
-        execution: 
-          onStart: 
-           - echo "TriggerPipelineTypeStep"
-  - name: pipeline2
-    steps:
-      - name: first_step
-        type: Bash
-        configuration:
-          pipelineName: pipeline2
-          stepName: first_step
-        execution: 
-          onStart: 
-           - echo "TriggerPipelineTypeStep with pipeline 2"      
+    steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
         configuration:

@@ -428,6 +428,9 @@ pipelines:
             - echo "on complete"
       - name: demoZstepToRemoveAndThis
         type: Bash
+        configuration:
+          inputSteps:
+            - name: demoZstepToRemove
         execution:
           onExecute: 
             - echo "on Excute"

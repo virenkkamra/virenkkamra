@@ -405,7 +405,7 @@ pipelines:
         type: Bash
         execution:
           onExecute: 
-            - echo ${int_test_integration_for_testing_two_name}
+            - echo "HELLO WORLD"
           onFailure:
             - echo "on fail success"
           onSuccess:

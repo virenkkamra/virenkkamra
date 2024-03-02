@@ -2,21 +2,21 @@ resources:
   - name: myGitRepoTEST
     type: GitRepo
     configuration:
-     gitProvider: test_integration_for_testing
+     gitProvider: test_integration_for_testing_two
      path: {{.jfrog-pipelines.sourceRepository}}
      branches:
       include: main
   - name: myGitRepoTESTnew
     type: GitRepo
     configuration:
-     gitProvider: test_integration_for_testing
+     gitProvider: test_integration_for_testing_two
      path: {{.jfrog-pipelines.sourceRepository}}
      branches:
       include: main
   - name: myGitRepoTESTnewer
     type: GitRepo
     configuration:
-     gitProvider: test_integration_for_testing
+     gitProvider: test_integration_for_testing_two
      path: {{.jfrog-pipelines.sourceRepository}}
      branches:
       include: main        
@@ -24,7 +24,7 @@ pipelines:
   - name: automation_demo_PDE
     configuration:
      integrations:
-      - name: test_integration_for_testing
+      - name: test_integration_for_testing_two
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
@@ -33,7 +33,7 @@ pipelines:
           - name: myGitRepoTEST
         execution:
           onExecute: 
-            - echo ${int_test_integration_for_testing_name}
+            - echo ${int_test_integration_for_testing_two_name}
           onFailure:
             - echo "on fail success"
           onSuccess:

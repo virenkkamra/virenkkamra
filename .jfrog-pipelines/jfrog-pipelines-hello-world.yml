@@ -415,7 +415,8 @@ pipelines:
       - name: demoZstepToRemove
         type: Bash
         configuration:
-          inputSteps: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          inputSteps: 
+           - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:
           onExecute: 
             - echo "on Excute"

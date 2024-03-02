@@ -400,9 +400,6 @@
 
 pipelines:  
   - name: automation_demo_PDE
-    configuration:
-     integrations:
-      - name: test_integration_for_testing_two
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash

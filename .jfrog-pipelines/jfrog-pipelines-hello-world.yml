@@ -1,25 +1,403 @@
-resources:
-  - name: myGitRepoTEST
-    type: GitRepo
-    configuration:
-     gitProvider: test_integration_for_testing_two
-     path: {{.jfrog-pipelines.sourceRepository}}
-     branches:
-      include: main
-  - name: myGitRepoTESTnew
-    type: GitRepo
-    configuration:
-     gitProvider: test_integration_for_testing_two
-     path: {{.jfrog-pipelines.sourceRepository}}
-     branches:
-      include: main
-  - name: myGitRepoTESTnewer
-    type: GitRepo
-    configuration:
-     gitProvider: test_integration_for_testing_two
-     path: {{.jfrog-pipelines.sourceRepository}}
-     branches:
-      include: main        
+# resources:
+#   - name: myGitRepoTEST
+#     type: GitRepo
+#     configuration:
+#      gitProvider: test_integration_for_testing_two
+#      path: {{.jfrog-pipelines.sourceRepository}}
+#      branches:
+#       include: main
+#   - name: myGitRepoTESTnew
+#     type: GitRepo
+#     configuration:
+#      gitProvider: test_integration_for_testing_two
+#      path: {{.jfrog-pipelines.sourceRepository}}
+#      branches:
+#       include: main
+#   - name: myGitRepoTESTnewer
+#     type: GitRepo
+#     configuration:
+#      gitProvider: test_integration_for_testing_two
+#      path: {{.jfrog-pipelines.sourceRepository}}
+#      branches:
+#       include: main        
+# pipelines:  
+#   - name: automation_demo_PDE
+#     configuration:
+#      integrations:
+#       - name: test_integration_for_testing_two
+#     steps:  
+#       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         type: Bash
+#         configuration:
+#          inputResources:
+#           - name: myGitRepoTEST
+#         execution:
+#           onExecute: 
+#             - echo ${int_test_integration_for_testing_two_name}
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success verify onCommit autoTrigger RUN:3"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemove
+#         type: Bash
+#         configuration:
+#           inputResources:
+#            - name: myGitRepoTESTnew
+#           inputSteps:
+#            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis
+#         type: Bash
+#         configuration:
+#           inputResources:
+#            - name: myGitRepoTESTnewer
+#           inputSteps:
+#            - name: demoZstepToRemove
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThisTooo
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis2
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis3
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis4
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis5
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis6
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis7
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis8
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis9
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis10
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis11
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis12
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis13
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis14
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis15
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis16
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis17
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis18
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis19
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis20
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis21
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis22
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis23
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+
+
+
+
 pipelines:  
   - name: automation_demo_PDE
     configuration:
@@ -28,9 +406,6 @@ pipelines:
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
-        configuration:
-         inputResources:
-          - name: myGitRepoTEST
         execution:
           onExecute: 
             - echo ${int_test_integration_for_testing_two_name}
@@ -42,11 +417,6 @@ pipelines:
             - echo "on complete"
       - name: demoZstepToRemove
         type: Bash
-        configuration:
-          inputResources:
-           - name: myGitRepoTESTnew
-          inputSteps:
-           - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:
           onExecute: 
             - echo "on Excute"
@@ -58,11 +428,6 @@ pipelines:
             - echo "on complete"
       - name: demoZstepToRemoveAndThis
         type: Bash
-        configuration:
-          inputResources:
-           - name: myGitRepoTESTnewer
-          inputSteps:
-           - name: demoZstepToRemove
         execution:
           onExecute: 
             - echo "on Excute"

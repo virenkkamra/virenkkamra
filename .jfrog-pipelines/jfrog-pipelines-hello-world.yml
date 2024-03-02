@@ -414,6 +414,8 @@ pipelines:
             - echo "on complete"
       - name: demoZstepToRemove
         type: Bash
+        configuration:
+          inputSteps: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:
           onExecute: 
             - echo "on Excute"

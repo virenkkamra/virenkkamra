@@ -399,7 +399,7 @@
 
 
 pipelines:  
-  - name: automation_demo_PDE
+  - name: jfrog_pipelines
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash

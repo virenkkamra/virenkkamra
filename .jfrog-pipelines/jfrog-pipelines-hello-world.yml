@@ -829,7 +829,7 @@ resources:
     configuration:
       interval: '*/2 * * * *'
       branches:
-        include: "jfrog_pipelines"
+        include: "main"
 
 pipelines:  
   - name: jfrog_pipelines

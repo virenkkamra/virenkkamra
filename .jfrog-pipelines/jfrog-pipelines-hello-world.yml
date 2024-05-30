@@ -831,8 +831,6 @@ pipelines:
         type: Bash
         configuration: 
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
         execution:
           onExecute: 
             - echo "HELLO WORLD"
@@ -846,8 +844,6 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
           inputSteps: 
            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:

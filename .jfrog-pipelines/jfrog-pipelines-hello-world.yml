@@ -829,7 +829,6 @@ pipelines:
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
-        configuration: 
         execution:
           onExecute: 
             - echo "HELLO WORLD"

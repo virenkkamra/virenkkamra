@@ -403,6 +403,8 @@ pipelines:
     steps:  
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
+        configuration: 
+          nodePool: oneboxMacOS13
         execution:
           onExecute: 
             - echo "HELLO WORLD"
@@ -415,6 +417,7 @@ pipelines:
       - name: demoZstepToRemove
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps: 
            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:
@@ -429,6 +432,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
             - name: demoZstepToRemove
         execution:
@@ -443,6 +447,7 @@ pipelines:
       - name: demoZstepToRemoveAndThisTooo
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -457,6 +462,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis2
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -471,6 +477,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis3
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -485,6 +492,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis4
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -499,6 +507,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis5
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -513,6 +522,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis6
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -527,6 +537,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis7
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -541,6 +552,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis8
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -555,6 +567,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis9
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -569,6 +582,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis10
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -583,6 +597,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis11
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -597,6 +612,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis12
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -611,6 +627,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis13
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -625,6 +642,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis14
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -639,6 +657,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis15
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -653,6 +672,7 @@ pipelines:
       - name: demoZstepToRemoveAndThis16
         type: Bash
         configuration:
+          nodePool: oneboxMacOS13
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -664,101 +684,101 @@ pipelines:
             - echo "on Success"
           onComplete:
             - echo "on complete"
-      - name: demoZstepToRemoveAndThis17
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis18
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis19
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis20
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis21
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis22
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis23
-        type: Bash
-        configuration:
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
+      # - name: demoZstepToRemoveAndThis17
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis18
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis19
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis20
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis21
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis22
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis23
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"

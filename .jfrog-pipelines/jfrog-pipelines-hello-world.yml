@@ -823,6 +823,14 @@
 
 
 
+resources:
+  - name: cron_trigger
+    type: CronTrigger
+    configuration:
+      # Runs at midnight every day
+      interval: '*/2 * * * *'
+      branches:
+        include: "jfrog_pipelines"
 
 pipelines:  
   - name: jfrog_pipelines

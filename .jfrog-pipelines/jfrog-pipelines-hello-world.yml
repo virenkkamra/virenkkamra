@@ -398,330 +398,330 @@
 
 
 
-pipelines:  
-  - name: jfrog_pipelines
-    steps:  
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        type: Bash
-        configuration: 
-          nodePool: oneboxMacOS13
-          runtime:
-            type: host
-        execution:
-          onExecute: 
-            - echo "HELLO WORLD"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success verify onCommit autoTrigger RUN:3"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemove
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps: 
-           - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-            - name: demoZstepToRemove
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThisTooo
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis2
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis3
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis4
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis5
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis6
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis7
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis8
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis9
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis10
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis11
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis12
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis13
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis14
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis15
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemoveAndThis16
-        type: Bash
-        configuration:
-          nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps:
-           - name: demoZstepToRemoveAndThis
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"
+# pipelines:  
+#   - name: jfrog_pipelines
+#     steps:  
+#       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         type: Bash
+#         configuration: 
+#           nodePool: oneboxMacOS13
+#           runtime:
+#             type: host
+#         execution:
+#           onExecute: 
+#             - echo "HELLO WORLD"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success verify onCommit autoTrigger RUN:3"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemove
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps: 
+#            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#             - name: demoZstepToRemove
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThisTooo
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis2
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis3
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis4
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis5
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis6
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis7
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis8
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis9
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis10
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis11
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis12
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis13
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis14
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis15
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemoveAndThis16
+#         type: Bash
+#         configuration:
+#           nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps:
+#            - name: demoZstepToRemoveAndThis
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"
       # - name: demoZstepToRemoveAndThis17
       #   type: Bash
       #   configuration:
@@ -820,3 +820,42 @@ pipelines:
       #       - echo "on Success"
       #     onComplete:
       #       - echo "on complete"
+
+
+
+
+pipelines:  
+  - name: jfrog_pipelines
+    steps:  
+      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        type: Bash
+        configuration: 
+          nodePool: oneboxMacOS13
+          runtime:
+            type: host
+        execution:
+          onExecute: 
+            - echo "HELLO WORLD"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success verify onCommit autoTrigger RUN:3"
+          onComplete:
+            - echo "on complete"
+      - name: demoZstepToRemove
+        type: Bash
+        configuration:
+          nodePool: oneboxMacOS13
+          runtime:
+            type: host
+          inputSteps: 
+           - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        execution:
+          onExecute: 
+            - echo "on Excute"
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success"
+          onComplete:
+            - echo "on complete"      

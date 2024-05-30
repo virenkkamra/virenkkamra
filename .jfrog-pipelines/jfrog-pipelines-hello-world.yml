@@ -420,8 +420,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps: 
            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:
@@ -437,8 +437,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
             - name: demoZstepToRemove
         execution:
@@ -454,8 +454,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -471,8 +471,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -488,8 +488,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -505,8 +505,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -522,8 +522,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -539,8 +539,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -556,8 +556,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -573,8 +573,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -590,8 +590,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -607,8 +607,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -624,8 +624,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -641,8 +641,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -658,8 +658,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -675,8 +675,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -692,8 +692,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:
@@ -709,8 +709,8 @@ pipelines:
         type: Bash
         configuration:
           nodePool: oneboxMacOS13
-          runtime:
-            type: host
+          # runtime:
+          #   type: host
           inputSteps:
            - name: demoZstepToRemoveAndThis
         execution:

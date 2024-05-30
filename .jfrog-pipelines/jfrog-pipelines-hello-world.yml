@@ -830,7 +830,6 @@ pipelines:
       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         type: Bash
         configuration: 
-          nodePool: oneboxMacOS13
         execution:
           onExecute: 
             - echo "HELLO WORLD"
@@ -843,7 +842,6 @@ pipelines:
       - name: demoZstepToRemove
         type: Bash
         configuration:
-          nodePool: oneboxMacOS13
           inputSteps: 
            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         execution:

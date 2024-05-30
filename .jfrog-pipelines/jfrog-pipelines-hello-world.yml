@@ -840,6 +840,8 @@ pipelines:
           nodePool: oneboxMacOS13
           runtime:
             type: host
+          inputResources:
+            - name: cron_trigger  
         execution:
           onExecute: 
             - echo "HELLO WORLD"

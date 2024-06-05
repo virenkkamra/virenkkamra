@@ -838,7 +838,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: saas_configuration_ci
+            - name: new_source_viren
               trigger: true
           # nodePool: oneboxMacOS13
           # runtime:

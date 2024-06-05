@@ -1,11 +1,11 @@
 resources:
-  - name: gitRepo_resource
+  - name: testingResouceTest
     type: GitRepo
     configuration: 
       gitProvider: testingIntTest
       path: {{.jfrog-pipelines.sourceRepository}}
-      # branches:
-      #   include: main
+      branches:
+        include: main
 pipelines: 
   - name: jfrog_pipelines
     steps:

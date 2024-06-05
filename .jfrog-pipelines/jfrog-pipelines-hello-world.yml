@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: custom_integration_tst
-      path: virenkkamra/jfrog-pipelines-hello-world.yml
+      path: virenkkamra/.jfrog-pipelines/jfrog-pipelines-hello-world.yml
       branches:
         include: master
 

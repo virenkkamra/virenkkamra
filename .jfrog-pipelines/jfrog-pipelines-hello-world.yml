@@ -1,11 +1,11 @@
-resources:
-  - name: myGitRepoTEST
-    type: GitRepo
-    configuration:
-     gitProvider: test_integration_for_testing_two
-     # path: {{.jfrog-pipelines.sourceRepository}}
-     branches:
-      include: main
+# resources:
+#   - name: myGitRepoTEST
+#     type: GitRepo
+#     configuration:
+#      gitProvider: test_integration_for_testing_two
+#      # path: {{.jfrog-pipelines.sourceRepository}}
+#      branches:
+#       include: main
   # - name: myGitRepoTESTnew
   #   type: GitRepo
   #   configuration:
@@ -20,27 +20,27 @@ resources:
   #    path: {{.jfrog-pipelines.sourceRepository}}
   #    branches:
   #     include: main        
-pipelines:  
-  - name: automation_demo_PDE
-    configuration:
-     integrations:
-      - name: test_integration_for_testing_two
-    steps:  
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        type: Bash
-        # configuration:
-        #  inputResources:
-        #   - name: myGitRepoTEST
-        execution:
-          onExecute: 
-            # - echo ${int_test_integration_for_testing_two_name}
-            - echo "sfivos"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success verify onCommit autoTrigger RUN:3"
-          onComplete:
-            - echo "on complete"
+# pipelines:  
+#   - name: automation_demo_PDE
+#     configuration:
+#      integrations:
+#       - name: test_integration_for_testing_two
+#     steps:  
+#       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         type: Bash
+#         # configuration:
+#         #  inputResources:
+#         #   - name: myGitRepoTEST
+#         execution:
+#           onExecute: 
+#             # - echo ${int_test_integration_for_testing_two_name}
+#             - echo "sfivos"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success verify onCommit autoTrigger RUN:3"
+#           onComplete:
+#             - echo "on complete"
       # - name: demoZstepToRemove
       #   type: Bash
       #   configuration:
@@ -838,6 +838,15 @@ pipelines:
 #      path: {{.jfrog-pipelines.sourceRepository}}
 #      branches:
 #       include: main            
+
+pipelines: 
+  - name: jfrog_pipelines
+    steps:
+      - name: demo_step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO WORLD"
 
 # pipelines:  
 #   - name: jfrog_pipelines

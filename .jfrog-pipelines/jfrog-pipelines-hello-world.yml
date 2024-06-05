@@ -1,8 +1,20 @@
+resources:
+  - name: custom_resource
+    type: GitRepo
+    configuration:
+      gitProvider: custom_integration_tst
+      path: virenkkamra/jfrog-pipelines-hello-world.yml
+      branches:
+        include: master
+
 pipelines:
   - name: hello_world_pipelines
     steps:
       - name: hello_world_steps
         type: Bash
+        configuration:
+          inputResources:
+            - name: custom_resource
         execution:
           onExecute:
             - echo "HELLO THERE"

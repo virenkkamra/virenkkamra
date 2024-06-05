@@ -1,11 +1,11 @@
 # resources:
-#   - name: myGitRepoTEST
-#     type: GitRepo
-#     configuration:
-#      gitProvider: test_integration_for_testing_two
-#      path: {{.jfrog-pipelines.sourceRepository}}
-#      branches:
-#       include: main
+  # - name: myGitRepoTEST
+  #   type: GitRepo
+  #   configuration:
+  #    gitProvider: test_integration_for_testing_two
+  #    path: {{.jfrog-pipelines.sourceRepository}}
+  #    branches:
+  #     include: main
 #   - name: myGitRepoTESTnew
 #     type: GitRepo
 #     configuration:
@@ -829,7 +829,14 @@ resources:
     configuration:
       interval: '* * * * *'
       branches:
-        include: "main"     
+        include: "main"
+  - name: myGitRepoTEST
+    type: GitRepo
+    configuration:
+     gitProvider: viren_int_new_github
+     path: {{.jfrog-pipelines.sourceRepository}}
+     branches:
+      include: main            
 
 pipelines:  
   - name: jfrog_pipelines
@@ -838,8 +845,8 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: cron_trigger
-              trigger: true
+            - name: myGitRepoTEST
+              # trigger: true
           # nodePool: oneboxMacOS13
           # runtime:
           #   type: host

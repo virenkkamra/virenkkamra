@@ -1,91 +1,91 @@
-# resources:
-  # - name: myGitRepoTEST
+resources:
+  - name: myGitRepoTEST
+    type: GitRepo
+    configuration:
+     gitProvider: test_integration_for_testing_two
+     path: {{.jfrog-pipelines.sourceRepository}}
+     branches:
+      include: main
+  # - name: myGitRepoTESTnew
   #   type: GitRepo
   #   configuration:
   #    gitProvider: test_integration_for_testing_two
   #    path: {{.jfrog-pipelines.sourceRepository}}
   #    branches:
   #     include: main
-#   - name: myGitRepoTESTnew
-#     type: GitRepo
-#     configuration:
-#      gitProvider: test_integration_for_testing_two
-#      path: {{.jfrog-pipelines.sourceRepository}}
-#      branches:
-#       include: main
-#   - name: myGitRepoTESTnewer
-#     type: GitRepo
-#     configuration:
-#      gitProvider: test_integration_for_testing_two
-#      path: {{.jfrog-pipelines.sourceRepository}}
-#      branches:
-#       include: main        
-# pipelines:  
-#   - name: automation_demo_PDE
-#     configuration:
-#      integrations:
-#       - name: test_integration_for_testing_two
-#     steps:  
-#       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-#         type: Bash
-#         configuration:
-#          inputResources:
-#           - name: myGitRepoTEST
-#         execution:
-#           onExecute: 
-#             - echo ${int_test_integration_for_testing_two_name}
-#           onFailure:
-#             - echo "on fail success"
-#           onSuccess:
-#             - echo "on Success verify onCommit autoTrigger RUN:3"
-#           onComplete:
-#             - echo "on complete"
-#       - name: demoZstepToRemove
-#         type: Bash
-#         configuration:
-#           inputResources:
-#            - name: myGitRepoTESTnew
-#           inputSteps:
-#            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-#         execution:
-#           onExecute: 
-#             - echo "on Excute"
-#           onFailure:
-#             - echo "on fail success"
-#           onSuccess:
-#             - echo "on Success"
-#           onComplete:
-#             - echo "on complete"
-#       - name: demoZstepToRemoveAndThis
-#         type: Bash
-#         configuration:
-#           inputResources:
-#            - name: myGitRepoTESTnewer
-#           inputSteps:
-#            - name: demoZstepToRemove
-#         execution:
-#           onExecute: 
-#             - echo "on Excute"
-#           onFailure:
-#             - echo "on fail success"
-#           onSuccess:
-#             - echo "on Success"
-#           onComplete:
-#             - echo "on complete"
-#       - name: demoZstepToRemoveAndThisTooo
-#         type: Bash
-#         configuration:
-#           inputSteps:
-#            - name: demoZstepToRemoveAndThis
-#         execution:
-#           onExecute: 
-#             - echo "on Excute"
-#           onFailure:
-#             - echo "on fail success"
-#           onSuccess:
-#             - echo "on Success"
-#           onComplete:
-#             - echo "on complete"
+  # - name: myGitRepoTESTnewer
+  #   type: GitRepo
+  #   configuration:
+  #    gitProvider: test_integration_for_testing_two
+  #    path: {{.jfrog-pipelines.sourceRepository}}
+  #    branches:
+  #     include: main        
+pipelines:  
+  - name: automation_demo_PDE
+    configuration:
+     integrations:
+      - name: test_integration_for_testing_two
+    steps:  
+      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        type: Bash
+        configuration:
+         inputResources:
+          - name: myGitRepoTEST
+        execution:
+          onExecute: 
+            - echo ${int_test_integration_for_testing_two_name}
+          onFailure:
+            - echo "on fail success"
+          onSuccess:
+            - echo "on Success verify onCommit autoTrigger RUN:3"
+          onComplete:
+            - echo "on complete"
+      # - name: demoZstepToRemove
+      #   type: Bash
+      #   configuration:
+      #     inputResources:
+      #      - name: myGitRepoTESTnew
+      #     inputSteps:
+      #      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThis
+      #   type: Bash
+      #   configuration:
+      #     inputResources:
+      #      - name: myGitRepoTESTnewer
+      #     inputSteps:
+      #      - name: demoZstepToRemove
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
+      # - name: demoZstepToRemoveAndThisTooo
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #      - name: demoZstepToRemoveAndThis
+      #   execution:
+      #     onExecute: 
+      #       - echo "on Excute"
+      #     onFailure:
+      #       - echo "on fail success"
+      #     onSuccess:
+      #       - echo "on Success"
+      #     onComplete:
+      #       - echo "on complete"
 #       - name: demoZstepToRemoveAndThis2
 #         type: Bash
 #         configuration:
@@ -838,41 +838,41 @@ resources:
      branches:
       include: main            
 
-pipelines:  
-  - name: jfrog_pipelines
-    steps:  
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        type: Bash
-        configuration:
-          inputResources:
-            - name: myGitRepoTEST
-              # trigger: true
-          # nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-        execution:
-          onExecute: 
-            - echo "HELLO WORLD"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success verify onCommit autoTrigger RUN:3"
-          onComplete:
-            - echo "on complete"
-      - name: demoZstepToRemove
-        type: Bash
-        configuration:
-          # nodePool: oneboxMacOS13
-          # runtime:
-          #   type: host
-          inputSteps: 
-           - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        execution:
-          onExecute: 
-            - echo "on Excute"
-          onFailure:
-            - echo "on fail success"
-          onSuccess:
-            - echo "on Success"
-          onComplete:
-            - echo "on complete"      
+# pipelines:  
+#   - name: jfrog_pipelines
+#     steps:  
+#       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: myGitRepoTEST
+#               # trigger: true
+#           # nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#         execution:
+#           onExecute: 
+#             - echo "HELLO WORLD"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success verify onCommit autoTrigger RUN:3"
+#           onComplete:
+#             - echo "on complete"
+#       - name: demoZstepToRemove
+#         type: Bash
+#         configuration:
+#           # nodePool: oneboxMacOS13
+#           # runtime:
+#           #   type: host
+#           inputSteps: 
+#            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#         execution:
+#           onExecute: 
+#             - echo "on Excute"
+#           onFailure:
+#             - echo "on fail success"
+#           onSuccess:
+#             - echo "on Success"
+#           onComplete:
+#             - echo "on complete"      

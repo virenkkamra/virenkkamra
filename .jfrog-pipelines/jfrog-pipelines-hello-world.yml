@@ -824,20 +824,20 @@ pipelines:
 
 
 
-resources:
-  - name: cron_trigger
-    type: CronTrigger
-    configuration:
-      interval: '* * * * *'
-      branches:
-        include: "main"
-  - name: myGitRepoTEST
-    type: GitRepo
-    configuration:
-     gitProvider: viren_int_new_github
-     path: {{.jfrog-pipelines.sourceRepository}}
-     branches:
-      include: main            
+# resources:
+#   - name: cron_trigger
+#     type: CronTrigger
+#     configuration:
+#       interval: '* * * * *'
+#       branches:
+#         include: "main"
+#   - name: myGitRepoTEST
+#     type: GitRepo
+#     configuration:
+#      gitProvider: viren_int_new_github
+#      path: {{.jfrog-pipelines.sourceRepository}}
+#      branches:
+#       include: main            
 
 # pipelines:  
 #   - name: jfrog_pipelines

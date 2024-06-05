@@ -1,3 +1,11 @@
+resources:
+  - name: gitRepo_resource
+    type: GitRepo
+    configuration: 
+      gitProvider: viren_int_new_github
+      path: {{.jfrog-pipelines.sourceRepository}}
+      branches:
+        include: main
 pipelines: 
   - name: jfrog_pipelines
     steps:

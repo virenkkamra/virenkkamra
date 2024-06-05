@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration: 
       gitProvider: testingIntTest
-      path: {{.jfrog-pipelines.sourceRepository}}
+      path: virenkkamra/virenkkamra
       branches:
         include: main
 # pipelines: 

@@ -44,12 +44,12 @@ pipelines:
 #     configuration:
 #      integrations:
 #       - name: test_integration_for_testing_two
-    steps:  
-      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        type: Bash
-        configuration:
-         inputResources:
-          - name: myGitRepoTEST
+    # steps:  
+    #   - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    #     type: Bash
+    #     configuration:
+    #      inputResources:
+    #       - name: myGitRepoTEST
 #         execution:
 #           onExecute: 
 #             # - echo ${int_test_integration_for_testing_two_name}

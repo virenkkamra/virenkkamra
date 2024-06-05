@@ -829,7 +829,7 @@ resources:
     configuration:
       interval: '* * * * *'
       branches:
-        include: "main"
+        include: "main"     
 
 pipelines:  
   - name: jfrog_pipelines
@@ -838,7 +838,7 @@ pipelines:
         type: Bash
         configuration:
           inputResources:
-            - name: new_source_viren
+            - name: cron_trigger
               trigger: true
           # nodePool: oneboxMacOS13
           # runtime:

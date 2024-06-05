@@ -11,6 +11,9 @@ pipelines:
     steps:
       - name: demo_step
         type: Bash
+        configuration:
+          inputResources:
+            - name: gitRepo_resource
         execution:
           onExecute:
             - echo "HELLO WORLD"
@@ -41,12 +44,12 @@ pipelines:
 #     configuration:
 #      integrations:
 #       - name: test_integration_for_testing_two
-#     steps:  
-#       - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-#         type: Bash
-#         # configuration:
-#         #  inputResources:
-#         #   - name: myGitRepoTEST
+    steps:  
+      - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        type: Bash
+        configuration:
+         inputResources:
+          - name: myGitRepoTEST
 #         execution:
 #           onExecute: 
 #             # - echo ${int_test_integration_for_testing_two_name}

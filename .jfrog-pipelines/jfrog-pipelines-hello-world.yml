@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
      gitProvider: test_integration_for_testing_two
-     path: {{.jfrog-pipelines.sourceRepository}}
+     # path: {{.jfrog-pipelines.sourceRepository}}
      branches:
       include: main
   # - name: myGitRepoTESTnew

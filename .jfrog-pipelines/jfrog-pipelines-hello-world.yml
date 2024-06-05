@@ -1,3 +1,11 @@
+pipelines: 
+  - name: jfrog_pipelines
+    steps:
+      - name: demo_step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO WORLD"
 # resources:
 #   - name: myGitRepoTEST
 #     type: GitRepo
@@ -838,15 +846,6 @@
 #      path: {{.jfrog-pipelines.sourceRepository}}
 #      branches:
 #       include: main            
-
-pipelines: 
-  - name: jfrog_pipelines
-    steps:
-      - name: demo_step
-        type: Bash
-        execution:
-          onExecute:
-            - echo "HELLO WORLD"
 
 # pipelines:  
 #   - name: jfrog_pipelines

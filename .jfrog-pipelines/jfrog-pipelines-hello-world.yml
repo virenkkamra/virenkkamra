@@ -20,7 +20,14 @@
 #             - echo "HELLO THERE"
 
 
-
+pipelines:
+  - name: ifbvosbv
+    steps: 
+      - name: soifvsv
+        type: Bash
+        execution:
+          onExecute: 
+           - echo "dfibp"
 
 
 

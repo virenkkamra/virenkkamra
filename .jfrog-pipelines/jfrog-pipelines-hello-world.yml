@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration: 
       gitProvider: viren_int_new_github
-      path: {{.jfrog-pipelines}}
+      path: {{.jfrog-pipelines/jfrog-pipelines-hello-world.yml}}
       branches:
         include: main
 pipelines: 

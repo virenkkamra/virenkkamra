@@ -1,19 +1,19 @@
-resources:
-  - name: gitRepo_resource
-    type: GitRepo
-    configuration: 
-      gitProvider: viren_int_new_github
-      path: {{.jfrog-pipelines.sourceRepository}}
-      branches:
-        include: main
+# resources:
+#   - name: gitRepo_resource
+#     type: GitRepo
+#     configuration: 
+#       gitProvider: viren_int_new_github
+#       path: {{.jfrog-pipelines.sourceRepository}}
+#       branches:
+#         include: main
 pipelines: 
   - name: jfrog_pipelines
+    configuration:
+      integrations:
+        - name: viren_int_new_github
     steps:
       - name: demo_step
         type: Bash
-        configuration:
-          inputResources:
-            - name: gitRepo_resource
         execution:
           onExecute:
             - echo "HELLO WORLD"

@@ -1,23 +1,23 @@
-resources:
-  - name: custom_resource
-    type: GitRepo
-    configuration:
-      gitProvider: custom_integration_tst
-      path: virenkkamra/virenkkamra
-      branches:
-        include: main
+# resources:
+#   - name: custom_resource
+#     type: GitRepo
+#     configuration:
+#       gitProvider: custom_integration_tst
+#       path: virenkkamra/virenkkamra
+#       branches:
+#         include: main
 
-pipelines:
-  - name: hello_world_pipelines
-    steps:
-      - name: hello_world_steps
-        type: Bash
-        configuration:
-          inputResources:
-            - name: custom_resource
-        execution:
-          onExecute:
-            - echo "HELLO THERE"
+# pipelines:
+#   - name: hello_world_pipelines
+#     steps:
+#       - name: hello_world_steps
+#         type: Bash
+#         configuration:
+#           inputResources:
+#             - name: custom_resource
+#         execution:
+#           onExecute:
+#             - echo "HELLO THERE"
 
 
 

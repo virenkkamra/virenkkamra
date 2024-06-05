@@ -2,15 +2,12 @@ resources:
   - name: gitRepo_resource
     type: GitRepo
     configuration: 
-      gitProvider: viren_int_new_github
-      path: {{.jfrog-pipelines/jfrog-pipelines-hello-world.yml}}
+      gitProvider: testingIntTest
+      path: {{.jfrog-pipelines.sourceRepository}}
       branches:
         include: main
 pipelines: 
   - name: jfrog_pipelines
-    configuration:
-      integrations:
-        - name: viren_int_new_github
     steps:
       - name: demo_step
         type: Bash

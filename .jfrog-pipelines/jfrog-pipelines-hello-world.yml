@@ -4,8 +4,8 @@ resources:
     configuration: 
       gitProvider: testingIntTest
       path: {{.jfrog-pipelines.sourceRepository}}
-      branches:
-        include: main
+      # branches:
+      #   include: main
 pipelines: 
   - name: jfrog_pipelines
     steps:

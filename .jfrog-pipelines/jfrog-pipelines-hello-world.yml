@@ -25,8 +25,8 @@ pipelines:
     steps: 
       - name: soifvsv
         type: Bash
-        configuration:
-          condition: 'CUSTOM == "false"'
+        # configuration:
+        #   condition: 'CUSTOM == "false"'
         execution:
           onExecute: 
            - echo "dfibp"

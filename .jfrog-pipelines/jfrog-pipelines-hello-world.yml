@@ -26,7 +26,7 @@ pipelines:
       environmentVariables:
         readOnly:
           CUSTOM: 'false'
-          CASPER: 'true'
+          CASPER: 'false'
     steps: 
       - name: step_1
         type: Bash

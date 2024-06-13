@@ -38,7 +38,8 @@ pipelines:
         type: Bash
         configuration:
           condition: CUSTOM == "false"
-          inputSteps: CASPER_STEP
+          inputSteps:
+            - name: CASPER_STEP
         execution:
           onExecute: 
            - echo "dfibp"

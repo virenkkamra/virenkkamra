@@ -25,7 +25,6 @@ pipelines:
     environmentVariables: 
       readOnly:
         CUSTOM: 'false'
-  - name: ifbvosbv
     steps: 
       - name: soifvsv
         type: Bash

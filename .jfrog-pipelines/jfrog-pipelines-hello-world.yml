@@ -21,10 +21,16 @@
 
 
 pipelines:
+  configuration:
+    environmentVariables: 
+      readOnly:
+        CUSTOM: 'false'
   - name: ifbvosbv
     steps: 
       - name: soifvsv
         type: Bash
+        configuration:
+          condition: 'CUSTOM == "false"'
         execution:
           onExecute: 
            - echo "dfibp"

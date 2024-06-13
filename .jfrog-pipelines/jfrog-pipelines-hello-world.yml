@@ -21,10 +21,7 @@
 
 
 pipelines:
-  configuration:
-    environmentVariables: 
-      readOnly:
-        CUSTOM: 'false'
+  - name: hello_pipelines_name
     steps: 
       - name: soifvsv
         type: Bash

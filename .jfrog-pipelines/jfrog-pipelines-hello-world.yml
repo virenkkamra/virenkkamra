@@ -30,7 +30,7 @@ pipelines:
       - name: soifvsv
         type: Bash
         configuration:
-          condition: 'CUSTOM == "false"'
+          condition: CUSTOM == "false"
         execution:
           onExecute: 
            - echo "dfibp"

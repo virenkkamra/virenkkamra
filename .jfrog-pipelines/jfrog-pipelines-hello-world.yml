@@ -28,22 +28,22 @@ pipelines:
           CUSTOM: 'false'
           CASPER: 'false'
     steps: 
-      - name: CASPER_STEP
+      - name: step_1
         type: Bash
         configuration:
-          condition: CASPER == "true"
+          condition: 'CASPER == "true"'
         execution:
           onExecute:
-           - echo "casper"
-      - name: soifvsv
+           - echo "step_1 echo"
+      - name: step_2
         type: Bash
         configuration:
-          condition: CUSTOM == "false"
+          condition: 'CUSTOM == "false"'
           inputSteps:
-            - name: CASPER_STEP
+            - name: step_1
         execution:
           onExecute: 
-           - echo "dfibp"
+           - echo "step_2 echo"
 
 
 

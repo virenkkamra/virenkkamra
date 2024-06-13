@@ -1,1 +1,14 @@
-
+pipelines:
+  - name: child_pipeline
+    configuration:
+      environmentVariables:
+        readOnly:
+          CUSTOM: 'false'
+    steps: 
+      - name: soifvsv
+        type: Bash
+        configuration:
+          condition: 'CUSTOM == "false"'
+        execution:
+          onExecute: 
+           - echo "dfibp"

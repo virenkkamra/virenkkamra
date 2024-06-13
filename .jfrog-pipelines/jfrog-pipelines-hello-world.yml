@@ -30,7 +30,8 @@ pipelines:
     steps: 
       - name: CASPER_STEP
         type: Bash
-        configuration: CASPER == "true"
+        configuration:
+          condition: CASPER == "true"
         execution:
           onExecute:
            - echo "casper"

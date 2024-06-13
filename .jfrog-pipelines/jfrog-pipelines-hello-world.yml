@@ -26,11 +26,19 @@ pipelines:
       environmentVariables:
         readOnly:
           CUSTOM: 'false'
+          CASPER: 'false'
     steps: 
+      - name: CASPER_STEP
+        type: Bash
+        configuration: CASPER == "true"
+        execution:
+          onExecute:
+           - echo "casper"
       - name: soifvsv
         type: Bash
         configuration:
           condition: CUSTOM == "false"
+          inputSteps: CASPER_STEP
         execution:
           onExecute: 
            - echo "dfibp"

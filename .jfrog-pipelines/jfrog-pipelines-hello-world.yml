@@ -25,20 +25,20 @@ pipelines:
     configuration:
       environmentVariables:
         readOnly:
-          CUSTOM: 'true'
-          CASPER: 'false'
+          step_1_env: 'false'
+          step_2_env: 'true'
     steps: 
       - name: step_1
         type: Bash
         configuration:
-          condition: 'CASPER == "true"'
+          condition: 'step_1_env == "true"'
         execution:
           onExecute:
            - echo "step_1 echo"
       - name: step_2
         type: Bash
         configuration:
-          condition: 'CUSTOM == "true"'
+          condition: 'step_2_env == "true"'
           inputSteps:
             - name: step_1
         execution:

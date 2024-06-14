@@ -38,7 +38,7 @@ pipelines:
       - name: step_2
         type: Bash
         configuration:
-          condition: 'CUSTOM == "false"'
+          condition: 'CUSTOM == "true"'
           inputSteps:
             - name: step_1
         execution:

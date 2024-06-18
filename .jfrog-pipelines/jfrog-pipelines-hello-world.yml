@@ -20,10 +20,10 @@
 #             - echo "HELLO THERE"
 
 
-onExecute:
-  - task: jfrog/setup-jfrog-cli@v0.2.0
-    input:
-      version: "2.52.0"
+# onExecute:
+#   - task: jfrog/setup-jfrog-cli@v0.2.0
+#     input:
+#       version: "2.52.0"
 
 pipelines:
   - name: hello_pipelines_name

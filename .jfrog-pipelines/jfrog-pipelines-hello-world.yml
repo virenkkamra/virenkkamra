@@ -68,14 +68,6 @@ pipelines:
              input:
                version: "2.52.0"
            - echo "step_1 echo"
-      - name: step_2
-        type: Bash
-        execution:
-          onExecute: 
-           - task: jfrog/setup-jfrog-cli@v0.2.0
-             input:
-               version: "2.52.0"
-           - echo "step_2 echo"
 
 
 

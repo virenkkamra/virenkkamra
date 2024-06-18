@@ -21,9 +21,9 @@
 
 
 # onExecute:
-#   - task: jfrog/setup-jfrog-cli@v0.2.0
+#   - task: jfrog/setup-jfrog-cli@v0.1.0
 #     input:
-#       version: "2.52.0"
+#       version: "2.50.4"
 
 # pipelines:
 #   - name: hello_pipelines_name

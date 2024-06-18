@@ -25,18 +25,43 @@
 #     input:
 #       version: "2.52.0"
 
+# pipelines:
+#   - name: hello_pipelines_name
+#     configuration:
+#       environmentVariables:
+#         readOnly:
+#           step_1_env: 'true'
+#           step_2_env: 'true'
+#     steps: 
+#       - name: step_1
+#         type: Bash
+#         configuration:
+#           condition: 'step_1_env == "true"'
+#         execution:
+#           onExecute:
+#            - task: jfrog/setup-jfrog-cli@v0.2.0
+#              input:
+#                version: "2.52.0"
+#            - echo "step_1 echo"
+#       - name: step_2
+#         type: Bash
+#         configuration:
+#           condition: 'step_2_env == "true"'
+#           inputSteps:
+#             - name: step_1
+#         execution:
+#           onExecute: 
+#            - task: jfrog/setup-jfrog-cli@v0.2.0
+#              input:
+#                version: "2.52.0"
+#            - echo "step_2 echo"
+
+
 pipelines:
   - name: hello_pipelines_name
-    # configuration:
-    #   environmentVariables:
-    #     readOnly:
-    #       step_1_env: 'true'
-    #       step_2_env: 'true'
     steps: 
       - name: step_1
         type: Bash
-        # configuration:
-        #   condition: 'step_1_env == "true"'
         execution:
           onExecute:
            - task: jfrog/setup-jfrog-cli@v0.2.0
@@ -45,19 +70,12 @@ pipelines:
            - echo "step_1 echo"
       - name: step_2
         type: Bash
-        # configuration:
-        #   condition: 'step_2_env == "true"'
-        #   inputSteps:
-        #     - name: step_1
         execution:
           onExecute: 
            - task: jfrog/setup-jfrog-cli@v0.2.0
              input:
                version: "2.52.0"
            - echo "step_2 echo"
-
-
-
 
 
 

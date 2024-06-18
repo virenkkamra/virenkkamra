@@ -47,8 +47,8 @@ pipelines:
         type: Bash
         configuration:
           condition: 'step_2_env == "true"'
-          inputSteps:
-            - name: step_1
+          # inputSteps:
+            # - name: step_1
         execution:
           onExecute: 
            - task: jfrog/setup-jfrog-cli@v0.2.0

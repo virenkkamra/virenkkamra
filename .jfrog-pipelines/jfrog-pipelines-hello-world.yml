@@ -54,19 +54,6 @@ pipelines:
 #            - echo "step_2 echo"
 
 
-pipelines:
-  - name: hello_pipelines_name
-    steps: 
-      - name: step_1
-        type: Bash
-        execution:
-          onExecute:
-           - echo "step_1 echo"
-          onStart:
-           - echo "started echo"
-
-
-
 # resources:
 #   - name: myGitRepoTEST
 #     type: GitRepo

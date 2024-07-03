@@ -8,7 +8,7 @@
 #         include: main
 
 pipelines:
-  - name: branch_pipeline
+  - name: branch_pipeline_testing
     steps:
       - name: hello_world_steps
         type: Bash
@@ -52,19 +52,6 @@ pipelines:
 #              input:
 #                version: "2.52.0"
 #            - echo "step_2 echo"
-
-
-pipelines:
-  - name: hello_pipelines_name
-    steps: 
-      - name: step_1
-        type: Bash
-        execution:
-          onExecute:
-           - echo "step_1 echo"
-          onStart:
-           - echo "started echo"
-
 
 
 # resources:

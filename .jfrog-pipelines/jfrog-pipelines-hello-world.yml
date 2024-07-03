@@ -7,17 +7,14 @@
 #       branches:
 #         include: main
 
-# pipelines:
-#   - name: hello_world_pipelines
-#     steps:
-#       - name: hello_world_steps
-#         type: Bash
-#         configuration:
-#           inputResources:
-#             - name: custom_resource
-#         execution:
-#           onExecute:
-#             - echo "HELLO THERE"
+pipelines:
+  - name: branch_pipeline
+    steps:
+      - name: hello_world_steps
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"
 
 
 # onExecute:

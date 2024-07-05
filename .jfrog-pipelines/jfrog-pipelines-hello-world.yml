@@ -15,7 +15,13 @@ pipelines:
         execution:
           onExecute:
             - echo "HELLO THERE"
-
+  - name: master_pipeline_2
+    steps:
+      - name: hello_world_steps
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"
 
 
 

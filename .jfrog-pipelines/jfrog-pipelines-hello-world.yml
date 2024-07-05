@@ -8,7 +8,7 @@
 #         include: main
 
 pipelines:
-  - name: branch_pipeline_testing
+  - name: master_pipeline
     steps:
       - name: hello_world_steps
         type: Bash

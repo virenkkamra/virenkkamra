@@ -27,7 +27,7 @@
 pipelines:
   - name: master_pipeline
     steps:
-      - name: hello_world_steps
+      - name: test_branch
         type: Bash
         execution:
           onExecute:

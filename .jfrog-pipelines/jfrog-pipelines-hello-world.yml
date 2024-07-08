@@ -7,14 +7,14 @@
 #       branches:
 #         include: main
 
-name: master_pipeline
-steps:
-  - name: branch1
-    type: Bash
-    execution:
-      onExecute:
-        - echo "HELLO THERE"
-
+pipelines:
+  - name: master_pipeline
+    steps:
+      - name: hello_world_steps
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"
 # name: branch_pipeline_testing
 # steps:
 #   - name: hello_world_steps

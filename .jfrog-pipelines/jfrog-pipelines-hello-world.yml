@@ -25,13 +25,27 @@
 
 
 pipelines:
-  - name: master_pipeline
+  - name: test_branch_pipeline_1
     steps:
-      - name: test_branch
+      - name: step
         type: Bash
         execution:
           onExecute:
             - echo "HELLO THERE"
+  - name: test_branch_pipeline_2
+    steps:
+      - name: step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"
+  - name: test_branch_pipeline_3
+    steps:
+      - name: step
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"            
 
 
 

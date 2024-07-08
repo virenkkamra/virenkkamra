@@ -24,14 +24,14 @@
 #             - echo "HELLO THERE"
 
 
-
-name: master_pipeline
-steps:
-  - name: hello_world_steps
-    type: Bash
-    execution:
-      onExecute:
-        - echo "HELLO THERE"
+pipelines:
+  - name: master_pipeline
+    steps:
+      - name: hello_world_steps
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"
 
 
 

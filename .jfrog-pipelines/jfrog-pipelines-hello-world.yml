@@ -15,6 +15,20 @@ pipelines:
         execution:
           onExecute:
             - echo "HELLO THERE"
+  - name: branch1
+    steps:
+      - name: hello_world_steps_b1
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"   
+  - name: branch2
+    steps:
+      - name: hello_world_steps_b2
+        type: Bash
+        execution:
+          onExecute:
+            - echo "HELLO THERE"            
 
 
 # onExecute:

@@ -40,14 +40,14 @@ pipelines:
           pipelineName: branch_pipeline
           stepName: branch_pipelines_step_one
         execution:
-          onStart:
+          onExecute:
             - echo "master pipeline trigger"
   - name: branch_pipeline
     steps: 
       - name: branch_pipelines_step_one
         type: Bash
         execution:
-          onStart:
+          onExecute:
             - echo "branch pipeline trigger"            
 
 # onExecute:

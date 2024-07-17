@@ -34,11 +34,6 @@
 pipelines:
   - name: master_pipelines
     steps:
-      - name: s_1
-        type: Bash
-        execution:
-          onStart:
-            - echo "master pipeline trigger step__1"    
       - name: trigger_pipeline_step
         type: TriggerPipeline
         configuration:
@@ -49,6 +44,11 @@ pipelines:
         execution:
           onStart:
             - echo "master pipeline trigger"
+      - name: s_1
+        type: Bash
+        execution:
+          onStart:
+            - echo "master pipeline trigger step__1"                
             
   - name: branch_pipeline
     steps: 

@@ -33,7 +33,7 @@
 
 pipelines:
   - name: master_pipelines
-    integrations: 
+    integration: 
       - name: viren_helper_integration
     steps: 
       - name: trigger_pipeline_step

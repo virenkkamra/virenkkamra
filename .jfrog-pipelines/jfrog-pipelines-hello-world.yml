@@ -44,7 +44,7 @@ pipelines:
             - echo "master pipeline trigger"
   - name: branch_pipeline
     steps: 
-      - name: trigger_pipeline_step
+      - name: branch_pipelines_step_one
         type: Bash
         execution:
           onStart:

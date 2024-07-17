@@ -35,7 +35,7 @@ pipelines:
   - name: master_pipelines
     steps: 
       - name: trigger_pipeline_step_step_1
-        type: TriggerPipeline
+        type: Bash
         execution:
           onStart:
             - echo "master pipeline trigger STEP 1"    
@@ -45,7 +45,7 @@ pipelines:
           pipelineName: branch_pipeline
           stepName: branch_pipelines_step_one
           integrations:
-            - name: jpat_deepak
+            - name: jf_PAT
         execution:
           onStart:
             - echo "master pipeline trigger"

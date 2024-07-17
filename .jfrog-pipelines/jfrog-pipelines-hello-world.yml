@@ -39,8 +39,6 @@ pipelines:
         configuration:
           pipelineName: branch_pipeline
           stepName: branch_pipelines_step_one
-          integration: 
-            - name: viren_helper_integration
         execution:
           onStart:
             - echo "master pipeline trigger"

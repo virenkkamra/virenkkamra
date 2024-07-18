@@ -40,7 +40,7 @@ pipelines:
           pipelineName: branch_pipeline
           stepName: branch_pipelines_step_one
           integrations:
-            - name: jf_PAT
+            - name: jpat_deepak
         execution:
           onStart:
             - echo "master pipeline trigger"               

@@ -79,16 +79,25 @@ pipelines:
             - echo "branch pipeline trigger"
       - name: branch_pipelines_step_two
         type: Bash
+        configuration:
+          inputSteps:
+            - name: branch_pipelines_step_one
         execution:
           onExecute:
             - echo "sfdoivb"
       - name: branch_pipelines_step_three
         type: Bash
+        configuration:
+          inputSteps:
+            - name: branch_pipelines_step_two       
         execution:
           onExecute:
             - echo "sfdoivb"
       - name: branch_pipelines_step_four
         type: Bash
+        configuration:
+          inputSteps:
+            - name: branch_pipelines_step_three
         execution:
           onExecute:
             - echo "sfdoivb"             

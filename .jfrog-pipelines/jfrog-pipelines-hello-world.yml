@@ -55,7 +55,7 @@ pipelines:
           onStart:
             - echo "master pipeline trigger 2"
       - name: Bash_step_number_3
-        type: Base
+        type: Bash
         execution:
           onStart:
             - echo "Hello Bash Step"            

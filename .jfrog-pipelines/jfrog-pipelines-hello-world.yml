@@ -49,26 +49,26 @@ pipelines:
         execution:
           onStart:
             - echo "master pipeline trigger"
-      - name: trigger_pipeline_step_2
-        type: TriggerPipeline
-        configuration:
-          inputSteps:
-            - name: trigger_pipeline_step
-          pipelineName: branch_pipeline_2
-          stepName: branch_pipelines_step_two
-          integrations:
-            - name: jpat_deepak
-        execution:
-          onStart:
-            - echo "master pipeline trigger 2"
-      - name: Bash_step_number_3
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: trigger_pipeline_step_2     
-        execution:
-          onStart:
-            - echo "Hello Bash Step"            
+      # - name: trigger_pipeline_step_2
+      #   type: TriggerPipeline
+      #   configuration:
+      #     inputSteps:
+      #       - name: trigger_pipeline_step
+      #     pipelineName: branch_pipeline_2
+      #     stepName: branch_pipelines_step_two
+      #     integrations:
+      #       - name: jpat_deepak
+      #   execution:
+      #     onStart:
+      #       - echo "master pipeline trigger 2"
+      # - name: Bash_step_number_3
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #       - name: trigger_pipeline_step_2     
+      #   execution:
+      #     onStart:
+      #       - echo "Hello Bash Step"            
             
   - name: branch_pipeline
     steps: 
@@ -77,13 +77,13 @@ pipelines:
         execution:
           onExecute:
             - echo "branch pipeline trigger"
-  - name: branch_pipeline_2
-    steps: 
-      - name: branch_pipelines_step_two
-        type: Bash
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger"             
+  # - name: branch_pipeline_2
+  #   steps: 
+  #     - name: branch_pipelines_step_two
+  #       type: Bash
+  #       execution:
+  #         onExecute:
+  #           - echo "branch pipeline trigger"             
 
 # pipelines:               
 #   - name: branch_pipeline

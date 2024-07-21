@@ -31,36 +31,36 @@
 #             - echo "HELLO THERE"
 
 
-# pipelines:
-#   - name: master_pipelines
-#     steps:
-#       - name: trigger_pipeline_step
-#         type: TriggerPipeline
-#         configuration:
-#           pipelineName: branch_pipeline
-#           stepName: branch_pipelines_step_one
-#           integrations:
-#             - name: jpat_deepak
-#         execution:
-#           onStart:
-#             - echo "master pipeline trigger"               
+pipelines:
+  - name: master_pipelines
+    steps:
+      - name: trigger_pipeline_step
+        type: TriggerPipeline
+        configuration:
+          pipelineName: branch_pipeline
+          stepName: branch_pipelines_step_one
+          integrations:
+            - name: jpat_deepak
+        execution:
+          onStart:
+            - echo "master pipeline trigger"               
             
-#   - name: branch_pipeline
-#     steps: 
-#       - name: branch_pipelines_step_one
-#         type: Bash
-#         execution:
-#           onExecute:
-#             - echo "branch pipeline trigger" 
-
-pipelines:               
   - name: branch_pipeline
     steps: 
       - name: branch_pipelines_step_one
         type: Bash
         execution:
           onExecute:
-            - echo "branch pipeline trigger"
+            - echo "branch pipeline trigger" 
+
+# pipelines:               
+#   - name: branch_pipeline
+#     steps: 
+#       - name: branch_pipelines_step_one
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger"
 
 # onExecute:
 #   - task: jfrog/setup-jfrog-cli@v0.1.0

@@ -29,6 +29,11 @@
 #         execution:
 #           onExecute:
 #             - echo "HELLO THERE"
+#         configuration:
+#           inputResources:
+#            - name: myGitRepoTESTnew
+#           inputSteps:
+#            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
 pipelines:
@@ -47,6 +52,8 @@ pipelines:
       - name: trigger_pipeline_step_2
         type: TriggerPipeline
         configuration:
+          inputSteps:
+            - name: trigger_pipeline_step
           pipelineName: branch_pipeline_2
           stepName: branch_pipelines_step_two
           integrations:
@@ -56,6 +63,9 @@ pipelines:
             - echo "master pipeline trigger 2"
       - name: Bash_step_number_3
         type: Bash
+        configuration:
+          inputSteps:
+            - name: trigger_pipeline_step_2     
         execution:
           onStart:
             - echo "Hello Bash Step"            

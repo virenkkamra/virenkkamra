@@ -37,38 +37,38 @@
 
 
 pipelines:
-  # - name: master_pipelines
-  #   steps:
-  #     - name: trigger_pipeline_step
-  #       type: TriggerPipeline
-  #       configuration:
-  #         pipelineName: branch_pipeline
-  #         stepName: branch_pipelines_step_one
-  #         integrations:
-  #           - name: jpat_deepak
-  #       execution:
-  #         onStart:
-  #           - echo "master pipeline trigger"
-  #     - name: trigger_pipeline_step_2
-  #       type: TriggerPipeline
-  #       configuration:
-  #         inputSteps:
-  #           - name: trigger_pipeline_step
-  #         pipelineName: branch_pipeline_2
-  #         stepName: branch_pipelines_step_two
-  #         integrations:
-  #           - name: jpat_deepak
-  #       execution:
-  #         onStart:
-  #           - echo "master pipeline trigger 2"
-  #     - name: Bash_step_number_3
-  #       type: Bash
-  #       configuration:
-  #         inputSteps:
-  #           - name: trigger_pipeline_step_2     
-  #       execution:
-  #         onStart:
-  #           - echo "Hello Bash Step"            
+  - name: master_pipelines
+    steps:
+      - name: trigger_pipeline_step
+        type: TriggerPipeline
+        configuration:
+          pipelineName: branch_pipeline
+          stepName: branch_pipelines_step_one
+          integrations:
+            - name: jpat_deepak
+        execution:
+          onStart:
+            - echo "master pipeline trigger"
+      # - name: trigger_pipeline_step_2
+      #   type: TriggerPipeline
+      #   configuration:
+      #     inputSteps:
+      #       - name: trigger_pipeline_step
+      #     pipelineName: branch_pipeline_2
+      #     stepName: branch_pipelines_step_two
+      #     integrations:
+      #       - name: jpat_deepak
+      #   execution:
+      #     onStart:
+      #       - echo "master pipeline trigger 2"
+      # - name: Bash_step_number_3
+      #   type: Bash
+      #   configuration:
+      #     inputSteps:
+      #       - name: trigger_pipeline_step_2     
+      #   execution:
+      #     onStart:
+      #       - echo "Hello Bash Step"            
             
   - name: branch_pipeline
     steps: 

@@ -36,7 +36,32 @@
 #            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
-pipelines:
+pipelines:  
+  - name: Matrix_Single_Pipeline
+    steps:     
+      - name: matrix_example
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputResources:
+            - name: CompletedBuildInfo
+        stepletMultipliers:
+          environmentVariables:             # Sets of environment variables for steplets
+            - animal:    dog                # - Set 1
+              mineral:   copper
+              vegetable: carrot
+            - animal:    goat               # - Set 2
+              mineral:   iron
+              vegetable: broccoli
+            - animal:    lizard             # - Set 3
+              mineral:   lead          
+              
+        execution:
+          onExecute:
+            - echo "Executing matrix step on ${steplet_id}"
+            - echo "Variation animal = ${animal}, mineral = ${mineral}, vegetable = ${vegetable}"
+
+# pipelines:
   # - name: master_pipelines
   #   steps:
   #     - name: trigger_pipeline_step
@@ -70,37 +95,37 @@ pipelines:
       #     onStart:
       #       - echo "Hello Bash Step"            
             
-  - name: branch_pipeline
-    steps: 
-      - name: branch_pipelines_step_one
-        type: Bash
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger"
-      - name: branch_pipelines_step_two
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: branch_pipelines_step_one
-        execution:
-          onExecute:
-            - echo "sfdoivb"
-      - name: branch_pipelines_step_three
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: branch_pipelines_step_two       
-        execution:
-          onExecute:
-            - echo "sfdoivb"
-      - name: branch_pipelines_step_four
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: branch_pipelines_step_three
-        execution:
-          onExecute:
-            - echo "sfdoivb"             
+  # - name: branch_pipeline
+  #   steps: 
+  #     - name: branch_pipelines_step_one
+  #       type: Bash
+  #       execution:
+  #         onExecute:
+  #           - echo "branch pipeline trigger"
+  #     - name: branch_pipelines_step_two
+  #       type: Bash
+  #       configuration:
+  #         inputSteps:
+  #           - name: branch_pipelines_step_one
+  #       execution:
+  #         onExecute:
+  #           - echo "sfdoivb"
+  #     - name: branch_pipelines_step_three
+  #       type: Bash
+  #       configuration:
+  #         inputSteps:
+  #           - name: branch_pipelines_step_two       
+  #       execution:
+  #         onExecute:
+  #           - echo "sfdoivb"
+  #     - name: branch_pipelines_step_four
+  #       type: Bash
+  #       configuration:
+  #         inputSteps:
+  #           - name: branch_pipelines_step_three
+  #       execution:
+  #         onExecute:
+  #           - echo "sfdoivb"             
   # - name: branch_pipeline_2
   #   steps: 
   #     - name: branch_pipelines_step_two

@@ -36,12 +36,21 @@
 #            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 
+resources:
+  - name: CompletedBuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: helperIntegration
+
 pipelines:  
   - name: Matrix_Single_Pipeline
     steps:     
       - name: matrix_example
         type: Matrix
         stepMode: Bash
+        configuration:
+          inputResources:
+            - name: CompletedBuildInfo
         stepletMultipliers:
           environmentVariables:             # Sets of environment variables for steplets
             - animal:    dog                # - Set 1

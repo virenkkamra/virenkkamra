@@ -115,13 +115,13 @@ pipelines:
         execution:
           onExecute:
             - echo "sfdoivb"             
-  - name: branch_pipeline_2
-    steps: 
-      - name: branch_pipelines_step_two
-        type: Bash
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger"             
+  # - name: branch_pipeline_2
+  #   steps: 
+  #     - name: branch_pipelines_step_two
+  #       type: Bash
+  #       execution:
+  #         onExecute:
+  #           - echo "branch pipeline trigger"             
 
 # pipelines:               
 #   - name: branch_pipeline

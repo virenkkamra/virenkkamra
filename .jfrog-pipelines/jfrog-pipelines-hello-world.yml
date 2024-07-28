@@ -71,18 +71,18 @@
 
 
 pipelines:
-  # - name: master_pipelines
-  #   steps:
-  #     - name: trigger_pipeline_step
-  #       type: TriggerPipeline
-  #       configuration:
-  #         pipelineName: branch_pipeline
-  #         stepName: branch_pipelines_step_one
-  #         integrations:
-  #           - name: jpat_deepak
-  #       execution:
-  #         onStart:
-  #           - echo "master pipeline trigger"                   
+  - name: master_pipelines
+    steps:
+      - name: trigger_pipeline_step
+        type: TriggerPipeline
+        configuration:
+          pipelineName: branch_pipeline
+          stepName: branch_pipelines_step_one
+          integrations:
+            - name: jpat_deepak
+        execution:
+          onStart:
+            - echo "master pipeline trigger"                   
   - name: branch_pipeline
     steps: 
       - name: branch_pipelines_step_one
@@ -99,8 +99,10 @@ pipelines:
           onExecute:
             - echo "sfdoivb"
       - name: branch_pipelines_step_three
-        type: Bash
+        type: TriggerPipeline
         configuration:
+          pipelineName: child_pipeline_one
+          stepName: child_pipeline_step_one        
           inputSteps:
             - name: branch_pipelines_step_two       
         execution:
@@ -113,14 +115,14 @@ pipelines:
             - name: branch_pipelines_step_three
         execution:
           onExecute:
-            - echo "sfdoivb"             
-  # - name: branch_pipeline_2
-  #   steps: 
-  #     - name: branch_pipelines_step_two
-  #       type: Bash
-  #       execution:
-  #         onExecute:
-  #           - echo "branch pipeline trigger"             
+            - echo "sfdoivb"
+  - name: child_pipeline_one
+    steps: 
+      - name: child_pipeline_step_one
+        type: Bash
+        execution:
+          onExecute:
+            - echo "branch pipeline trigger"          
 
 # pipelines:               
 #   - name: branch_pipeline

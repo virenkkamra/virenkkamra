@@ -124,7 +124,39 @@ pipelines:
         type: Bash
         execution:
           onExecute:
-            - echo "branch pipeline trigger"          
+            - echo "branch pipeline trigger"
+      - name: child_pipeline_step_two
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: child_pipeline_step_one        
+        execution:
+          onExecute:
+            - echo "branch pipeline trigger" 
+      - name: child_pipeline_step_three
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: child_pipeline_step_two        
+        execution:
+          onExecute:
+            - echo "branch pipeline trigger" 
+      - name: child_pipeline_step_four
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: child_pipeline_step_three        
+        execution:
+          onExecute:
+            - echo "branch pipeline trigger" 
+      - name: child_pipeline_step_five
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: child_pipeline_step_four        
+        execution:
+          onExecute:
+            - echo "branch pipeline trigger"             
 
 # pipelines:               
 #   - name: branch_pipeline

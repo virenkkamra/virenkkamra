@@ -106,7 +106,7 @@ pipelines:
           inputSteps:
             - name: branch_pipelines_step_two       
         execution:
-          onExecute:
+          onStart:
             - echo "sfdoivb"
       - name: branch_pipelines_step_four
         type: Bash

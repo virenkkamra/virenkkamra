@@ -1,33 +1,33 @@
-# resources:
-#   - name: CompletedBuildInfo
-#     type: BuildInfo
-#     configuration:
-#       sourceArtifactory: helperIntegration
+resources:
+  - name: CompletedBuildInfo
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: jpat_deepak
 
-# pipelines:  
-#   - name: Matrix_Single_Pipeline
-#     steps:     
-#       - name: matrix_example
-#         type: Matrix
-#         stepMode: Bash
-#         configuration:
-#           inputResources:
-#             - name: CompletedBuildInfo
-#         stepletMultipliers:
-#           environmentVariables:             # Sets of environment variables for steplets
-#             - animal:    dog                # - Set 1
-#               mineral:   copper
-#               vegetable: carrot
-#             - animal:    goat               # - Set 2
-#               mineral:   iron
-#               vegetable: broccoli
-#             - animal:    lizard             # - Set 3
-#               mineral:   lead          
+pipelines:  
+  - name: Matrix_Single_Pipeline
+    steps:     
+      - name: matrix_example
+        type: Matrix
+        stepMode: Bash
+        configuration:
+          inputResources:
+            - name: CompletedBuildInfo
+        stepletMultipliers:
+          environmentVariables:             # Sets of environment variables for steplets
+            - animal:    dog                # - Set 1
+              mineral:   copper
+              vegetable: carrot
+            - animal:    goat               # - Set 2
+              mineral:   iron
+              vegetable: broccoli
+            - animal:    lizard             # - Set 3
+              mineral:   lead          
               
-#         execution:
-#           onExecute:
-#             - echo "Executing matrix step on ${steplet_id}"
-#             - echo "Variation animal = ${animal}, mineral = ${mineral}, vegetable = ${vegetable}"
+        execution:
+          onExecute:
+            - echo "Executing matrix step on ${steplet_id}"
+            - echo "Variation animal = ${animal}, mineral = ${mineral}, vegetable = ${vegetable}"
 
 
 # resources:
@@ -70,93 +70,93 @@
 
 
 
-pipelines:
-  - name: master_pipelines
-    steps:
-      - name: trigger_pipeline_step
-        type: TriggerPipeline
-        configuration:
-          pipelineName: branch_pipeline
-          stepName: branch_pipelines_step_one
-          integrations:
-            - name: jpat_deepak
-        execution:
-          onStart:
-            - echo "master pipeline trigger"                   
-  - name: branch_pipeline
-    steps: 
-      - name: branch_pipelines_step_one
-        type: Bash
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger"
-      - name: branch_pipelines_step_two
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: branch_pipelines_step_one
-        execution:
-          onExecute:
-            - echo "sfdoivb"
-      - name: branch_pipelines_step_three
-        type: TriggerPipeline
-        configuration:
-          pipelineName: child_pipeline_one
-          stepName: child_pipeline_step_one
-          integrations:
-            - name: jpat_deepak          
-          inputSteps:
-            - name: branch_pipelines_step_two       
-        execution:
-          onStart:
-            - echo "sfdoivb"
-      - name: branch_pipelines_step_four
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: branch_pipelines_step_three
-        execution:
-          onExecute:
-            - echo "sfdoivb"
-  - name: child_pipeline_one
-    steps: 
-      - name: child_pipeline_step_one
-        type: Bash
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger"
-      - name: child_pipeline_step_two
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: child_pipeline_step_one        
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger" 
-      - name: child_pipeline_step_three
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: child_pipeline_step_two        
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger" 
-      - name: child_pipeline_step_four
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: child_pipeline_step_three        
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger" 
-      - name: child_pipeline_step_five
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: child_pipeline_step_four        
-        execution:
-          onExecute:
-            - echo "branch pipeline trigger"             
+# pipelines:
+#   - name: master_pipelines
+#     steps:
+#       - name: trigger_pipeline_step
+#         type: TriggerPipeline
+#         configuration:
+#           pipelineName: branch_pipeline
+#           stepName: branch_pipelines_step_one
+#           integrations:
+#             - name: jpat_deepak
+#         execution:
+#           onStart:
+#             - echo "master pipeline trigger"                   
+#   - name: branch_pipeline
+#     steps: 
+#       - name: branch_pipelines_step_one
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger"
+#       - name: branch_pipelines_step_two
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: branch_pipelines_step_one
+#         execution:
+#           onExecute:
+#             - echo "sfdoivb"
+#       - name: branch_pipelines_step_three
+#         type: TriggerPipeline
+#         configuration:
+#           pipelineName: child_pipeline_one
+#           stepName: child_pipeline_step_one
+#           integrations:
+#             - name: jpat_deepak          
+#           inputSteps:
+#             - name: branch_pipelines_step_two       
+#         execution:
+#           onStart:
+#             - echo "sfdoivb"
+#       - name: branch_pipelines_step_four
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: branch_pipelines_step_three
+#         execution:
+#           onExecute:
+#             - echo "sfdoivb"
+#   - name: child_pipeline_one
+#     steps: 
+#       - name: child_pipeline_step_one
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger"
+#       - name: child_pipeline_step_two
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: child_pipeline_step_one        
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger" 
+#       - name: child_pipeline_step_three
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: child_pipeline_step_two        
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger" 
+#       - name: child_pipeline_step_four
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: child_pipeline_step_three        
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger" 
+#       - name: child_pipeline_step_five
+#         type: Bash
+#         configuration:
+#           inputSteps:
+#             - name: child_pipeline_step_four        
+#         execution:
+#           onExecute:
+#             - echo "branch pipeline trigger"             
 
 # pipelines:               
 #   - name: branch_pipeline

@@ -102,7 +102,9 @@ pipelines:
         type: TriggerPipeline
         configuration:
           pipelineName: child_pipeline_one
-          stepName: child_pipeline_step_one        
+          stepName: child_pipeline_step_one
+          integrations:
+            - name: jpat_deepak          
           inputSteps:
             - name: branch_pipelines_step_two       
         execution:

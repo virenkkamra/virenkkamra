@@ -43,7 +43,12 @@ pipelines:
 #   - name: master_pipeline
 #     steps:
 #       - name: hello_world_steps
-#         type: Bash
+#         type: TriggerPipeline
+#         configuration:
+#           pipelineName: branch1
+#           stepName: hello_world_steps_b1
+#           integrations:
+#             - name: jpat_deepak        
 #         execution:
 #           onExecute:
 #             - echo "HELLO THERE"
@@ -61,11 +66,21 @@ pipelines:
 #         execution:
 #           onExecute:
 #             - echo "HELLO THERE"
-#         configuration:
-#           inputResources:
-#            - name: myGitRepoTESTnew
-#           inputSteps:
-#            - name: demoZstepAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+#   - name: branch3
+#     steps:
+#       - name: hello_world_steps_b3
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo "HELLO THERE"
+#   - name: branch4
+#     steps:
+#       - name: hello_world_steps_b4
+#         type: Bash
+#         execution:
+#           onExecute:
+#             - echo "HELLO THERE"         
+           
 
 
 

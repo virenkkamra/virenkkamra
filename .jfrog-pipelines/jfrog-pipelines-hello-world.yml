@@ -30,14 +30,14 @@
 #             - echo "Variation animal = ${animal}, mineral = ${mineral}, vegetable = ${vegetable}"
 
 
-resources:
-  - name: custom_resource
-    type: GitRepo
-    configuration:
-      gitProvider: custom_integration_tst
-      path: virenkkamra/virenkkamra
-      branches:
-        include: main
+# resources:
+#   - name: custom_resource
+#     type: GitRepo
+#     configuration:
+#       gitProvider: custom_integration_tst
+#       path: virenkkamra/virenkkamra
+#       branches:
+#         include: main
 
 # pipelines:
 #   - name: master_pipeline
@@ -106,7 +106,7 @@ pipelines:
           onExecute:
             - echo "branch pipeline trigger"
           onComplete:
-            - save_tests $res_custom_resource_resourcePath/testreport.xml
+            - echo "on complete"
             
       # - name: branch_pipelines_step_two
         # type: Bash
